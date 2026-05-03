@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Neverness to Everness Complete Build Guide - Beginner Tips, Character Builds, Arcs, Cartridges, Modules & Theory (Updated May 2026)">
+<title>Neverness to Everness — Complete Build Guide</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+:root {
+  --bg:#0a0c10;--bg2:#111420;--bg3:#181c28;--bg4:#1e2232;--bg5:#242840;
+  --border:rgba(180,160,255,0.13);--border2:rgba(180,160,255,0.28);
+  --accent:#a78bfa;--accent2:#7c6af0;--accent3:#c4b5fd;
+  --gold:#f4b942;--silver:#94a3b8;--bronze:#cd7f32;
+  --text:#e2e0f0;--text2:#a09cc0;--text3:#5e5b7a;
+  --psyche:#d946ef;--cosmos:#06b6d4;--chaos:#f97316;
+  --anima:#22c55e;--lakshana:#eab308;--incantation:#8b5cf6;
+  --crit:#ef4444;--dmg:#f97316;--atk:#eab308;
+  --hp:#22c55e;--def:#3b82f6;--brk:#a855f7;--chrg:#06b6d4;
+  --s:#f4b942;--a:#94a3b8;--b:#cd7f32;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Raleway',sans-serif;font-size:14.5px;line-height:1.7}
+.hero{background:linear-gradient(180deg,#180828 0%,#0d0f1c 100%);border-bottom:1px solid var(--border2);padding:2.8rem 2rem 2.2rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(167,139,250,0.2) 0%,transparent 70%);pointer-events:none}
+.hero h1{font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;color:#fff;letter-spacing:.08em;text-shadow:0 0 40px rgba(167,139,250,.5);margin-bottom:.3rem}
+.hero .sub{color:var(--accent3);font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:1rem}
+.hero .tag{color:var(--text2);font-size:.82rem;max-width:580px;margin:0 auto}
+nav{background:var(--bg2);border-bottom:1px solid var(--border);display:flex;overflow-x:auto;position:sticky;top:0;z-index:100;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);cursor:pointer;font-family:'Raleway',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;padding:.85rem 1.2rem;text-transform:uppercase;white-space:nowrap;transition:all .2s}
+nav button:hover{color:var(--accent3)}
+nav button.active{color:var(--accent);border-bottom-color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:2rem}
+.sec{display:none}.sec.active{display:block}
+h2{font-family:'Cinzel',serif;font-size:1.3rem;font-weight:600;color:var(--accent3);letter-spacing:.06em;margin-bottom:1.4rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-family:'Cinzel',serif;font-size:.95rem;font-weight:600;color:var(--gold);letter-spacing:.04em;margin-bottom:.7rem}
+h4{font-size:.82rem;font-weight:700;color:var(--accent3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.4rem}
+.card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.4rem;margin-bottom:1.1rem}
+.card:hover{border-color:var(--border2)}
+p{color:var(--text2);font-size:.83rem;margin-bottom:.6rem}
+p:last-child{margin-bottom:0}
+/* BADGES */
+.badge{font-size:.67rem;font-weight:700;letter-spacing:.07em;padding:2px 7px;border-radius:3px;text-transform:uppercase;display:inline-flex;align-items:center}
+.bs{background:rgba(244,185,66,.13);color:var(--s);border:1px solid rgba(244,185,66,.3)}
+.ba{background:rgba(148,163,184,.1);color:var(--a);border:1px solid rgba(148,163,184,.22)}
+.bb{background:rgba(205,127,50,.1);color:var(--b);border:1px solid rgba(205,127,50,.22)}
+.bpsyche{background:rgba(217,70,239,.1);color:#e879f9;border:1px solid rgba(217,70,239,.22)}
+.bcosmos{background:rgba(6,182,212,.1);color:#22d3ee;border:1px solid rgba(6,182,212,.22)}
+.bchaos{background:rgba(249,115,22,.1);color:#fb923c;border:1px solid rgba(249,115,22,.22)}
+.banima{background:rgba(34,197,94,.1);color:#4ade80;border:1px solid rgba(34,197,94,.22)}
+.blakshana{background:rgba(234,179,8,.1);color:#fde047;border:1px solid rgba(234,179,8,.22)}
+.bincantation{background:rgba(139,92,246,.13);color:#a78bfa;border:1px solid rgba(139,92,246,.28)}
+.bdps{background:rgba(239,68,68,.08);color:#fca5a5;border:1px solid rgba(239,68,68,.2)}
+.bsup{background:rgba(59,130,246,.08);color:#93c5fd;border:1px solid rgba(59,130,246,.2)}
+.btank{background:rgba(34,197,94,.08);color:#86efac;border:1px solid rgba(34,197,94,.2)}
+/* STAT PILLS */
+.pill{font-size:.73rem;font-weight:700;padding:3px 10px;border-radius:20px;display:inline-flex;align-items:center;gap:3px}
+.pcrit{background:rgba(239,68,68,.1);color:#fca5a5;border:1px solid rgba(239,68,68,.22)}
+.pcdmg{background:rgba(239,68,68,.07);color:#fecaca;border:1px solid rgba(239,68,68,.18)}
+.pdmg{background:rgba(249,115,22,.1);color:#fdba74;border:1px solid rgba(249,115,22,.22)}
+.patk{background:rgba(234,179,8,.1);color:#fde68a;border:1px solid rgba(234,179,8,.22)}
+.php{background:rgba(34,197,94,.08);color:#bbf7d0;border:1px solid rgba(34,197,94,.18)}
+.pdef{background:rgba(59,130,246,.08);color:#bfdbfe;border:1px solid rgba(59,130,246,.18)}
+.pbrk{background:rgba(168,85,247,.1);color:#e9d5ff;border:1px solid rgba(168,85,247,.22)}
+.ptype{background:rgba(167,139,250,.1);color:var(--accent3);border:1px solid rgba(167,139,250,.22)}
+.pchrg{background:rgba(6,182,212,.08);color:#a5f3fc;border:1px solid rgba(6,182,212,.18)}
+.n{font-size:.63rem;opacity:.65;font-weight:700}
+/* FILTER BAR */
+.fbar{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.3rem}
+.fbtn{background:var(--bg3);border:1px solid var(--border);border-radius:20px;color:var(--text2);cursor:pointer;font-family:'Raleway',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.07em;padding:4px 13px;text-transform:uppercase;transition:all .2s}
+.fbtn:hover,.fbtn.active{background:rgba(167,139,250,.13);border-color:var(--accent);color:var(--accent3)}
+/* CHARACTER CARDS */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.1rem}
+.cc{background:var(--bg3);border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s}
+.cc:hover{border-color:var(--border2);transform:translateY(-2px)}
+.cc.open{border-color:var(--accent2)}
+.cc-head{display:flex;align-items:center;gap:.9rem;padding:.9rem 1.1rem;border-bottom:1px solid var(--border)}
+.avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:.8rem;font-weight:700;flex-shrink:0;border:2px solid}
+.cname{font-family:'Cinzel',serif;font-size:.95rem;font-weight:600;color:var(--text)}
+.cmeta{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:3px}
+.arr{color:var(--text3);font-size:1rem;transition:transform .2s;flex-shrink:0;margin-left:auto}
+.cc.open .arr{transform:rotate(180deg)}
+.cc-body{display:none;padding:.9rem 1.1rem 1.1rem}
+.cc.open .cc-body{display:block}
+/* BUILD TABS */
+.btabs{display:flex;gap:.3rem;flex-wrap:wrap;margin-bottom:.9rem}
+.btab{background:var(--bg4);border:1px solid var(--border);border-radius:6px;color:var(--text3);cursor:pointer;font-size:.7rem;font-weight:700;letter-spacing:.07em;padding:4px 11px;text-transform:uppercase;transition:all .15s}
+.btab:hover{color:var(--text2)}
+.btab.active{background:rgba(167,139,250,.15);border-color:var(--accent2);color:var(--accent3)}
+.bpane{display:none}.bpane.active{display:block}
+/* BUILD PANE ELEMENTS */
+.blabel{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:.4rem;margin-top:.7rem}
+.blabel:first-child{margin-top:0}
+.pillrow{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.3rem}
+.brow{background:var(--bg4);border-radius:6px;padding:.5rem .7rem;margin-bottom:.35rem;font-size:.8rem}
+.brow .rname{color:var(--accent3);font-weight:600}
+.brow .rdesc{color:var(--text2);font-size:.75rem;margin-top:2px}
+.note{background:rgba(167,139,250,.05);border:1px solid rgba(167,139,250,.18);border-left:3px solid var(--accent);border-radius:6px;padding:.6rem .8rem;font-size:.8rem;color:var(--text2);margin-top:.6rem}
+.note strong{color:var(--accent3)}
+.warn{background:rgba(244,185,66,.05);border:1px solid rgba(244,185,66,.18);border-left:3px solid var(--gold);border-radius:6px;padding:.6rem .8rem;font-size:.8rem;color:var(--text2);margin-top:.5rem}
+.warn strong{color:var(--gold)}
+/* PYRAMID */
+.pyr{margin:1.2rem 0}
+.pyr-r{display:flex;justify-content:center;margin-bottom:3px}
+.pyr-b{border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;letter-spacing:.04em;padding:7px 14px;text-align:center}
+/* GOLDEN RULES GRID */
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.9rem;margin-bottom:1.8rem}
+.rcard{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.1rem}
+.rnum{font-family:'Cinzel',serif;font-size:1.8rem;font-weight:700;color:var(--border2);line-height:1;margin-bottom:.4rem}
+.rtitle{font-weight:700;color:var(--accent3);font-size:.85rem;margin-bottom:.3rem;letter-spacing:.04em}
+.rtext{color:var(--text2);font-size:.8rem}
+/* CARTRIDGE GRID */
+.cgd{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1rem}
+.cartcard{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.1rem}
+.cch{display:flex;align-items:center;justify-content:space-between;margin-bottom:.6rem}
+.ccname{font-family:'Cinzel',serif;font-size:.88rem;font-weight:600;color:var(--text)}
+.ttype{font-size:.67rem;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.06em}
+.c2pc{color:var(--silver);font-size:.78rem;margin-bottom:.25rem}
+.c4pc{color:var(--text);font-size:.8rem}
+.cl{font-size:.67rem;font-weight:700;letter-spacing:.1em;color:var(--text3);text-transform:uppercase;margin-right:.35rem}
+.cwho{font-size:.73rem;color:var(--accent);margin-top:.55rem}
+.crank-row{display:flex;gap:.5rem;margin-bottom:.5rem;flex-wrap:wrap}
+.crank-item{background:var(--bg4);border-radius:5px;padding:.4rem .6rem;font-size:.75rem;flex:1;min-width:120px}
+.crank-item .rk{font-weight:700;margin-right:.3rem}
+/* ARCS GRID */
+.agd{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1rem}
+.arccard{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.1rem}
+.arch{display:flex;align-items:center;justify-content:space-between;margin-bottom:.4rem}
+.arcname{font-family:'Cinzel',serif;font-size:.88rem;font-weight:600;color:var(--text)}
+.arcfx{color:var(--text2);font-size:.79rem}
+.arcwho{color:var(--accent);font-size:.72rem;margin-top:.45rem}
+/* PNP */
+.pnp{background:linear-gradient(135deg,rgba(167,139,250,.07) 0%,rgba(124,106,240,.04) 100%);border:1px solid rgba(167,139,250,.22);border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:.9rem}
+.pnph{display:flex;align-items:center;gap:.75rem;margin-bottom:.7rem}
+.pnpname{font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--text)}
+.pnprow{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:.25rem 0;font-size:.8rem}
+.pnplbl{color:var(--text3);font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;min-width:65px}
+/* BEGINNER */
+.bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-bottom:1.5rem}
+.bgtip{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.1rem}
+.bgtip .bnum{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;color:var(--border2);line-height:1;margin-bottom:.4rem}
+.bgtip .btitle{font-weight:700;color:var(--accent3);font-size:.88rem;margin-bottom:.35rem}
+/* DEEP DIVE */
+.ddblock{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.4rem;margin-bottom:1.1rem}
+.formula{background:var(--bg);border:1px solid var(--border2);border-radius:7px;padding:.9rem 1.1rem;font-family:'Courier New',monospace;font-size:.82rem;color:var(--accent3);margin:.7rem 0;overflow-x:auto}
+.scroll-t{overflow-x:auto;border-radius:8px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th{text-align:left;padding:7px 11px;background:var(--bg4);color:var(--text3);font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--border)}
+td{padding:9px 11px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--bg4)}
+hr{border:none;border-top:1px solid var(--border);margin:1rem 0}
+.modtier{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;margin:.8rem 0}
+.modbox{background:var(--bg4);border-radius:8px;padding:.8rem;text-align:center}
+.modbox .mk{font-family:'Cinzel',serif;font-size:.9rem;font-weight:700;margin-bottom:.3rem}
+.modbox p{font-size:.75rem;color:var(--text2);text-align:left}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>Neverness to Everness</h1>
+  <div class="sub">Complete Build Guide — All Characters · All Ranks</div>
+  <p class="tag">Beginner Guide · Arcs · Cartridges · Modules · Plug &amp; Play · Deep Dive Theory</p>
+</div>
+<nav id="nav">
+  <button class="active" onclick="showSec('begin')">Beginner Guide</button>
+  <button onclick="showSec('golden')">Golden Rules</button>
+  <button onclick="showSec('plugplay')">Plug &amp; Play</button>
+  <button onclick="showSec('chars')">Characters</button>
+  <button onclick="showSec('carts')">Cartridges</button>
+  <button onclick="showSec('arcs')">Arcs</button>
+  <button onclick="showSec('modules')">Modules</button>
+  <button onclick="showSec('deepdive')">Deep Dive</button>
+</nav>
+
+<!-- ==================== BEGINNER ==================== -->
+<div class="sec active wrap" id="begin">
+  <h2>Beginner's Guide — Welcome to Hethereau</h2>
+  <p>New to Neverness to Everness? This section covers everything you need to hit the ground running before touching any build theory.</p>
+
+  <div class="bgrid">
+    <div class="bgtip"><div class="bnum">01</div><div class="btitle">Reroll for Your Core Team</div><p>The game gives up to 40 free pulls after the prologue. Use them to reroll for at least one S-rank DPS. Your starting roster shapes your early experience: a good DPS paired with a healer and a buffer clears everything comfortably.</p></div>
+    <div class="bgtip"><div class="bnum">02</div><div class="btitle">Know the Three Roles</div><p><strong style="color:#fca5a5">DPS (Damage)</strong>: Your primary damage dealers. Invest in these first. S-rank DPS like Nanally, Chiz, Jiuyuan, and Baicang are top-tier picks.<br><strong style="color:#93c5fd">Survival</strong>: Fadia and Edgar keep the team alive. You need one.<br><strong style="color:#bbf7d0">Buffer</strong>: Sakiri, Hotori, and Adler amplify everyone else.</p></div>
+    <div class="bgtip"><div class="bnum">03</div><div class="btitle">Focus One Team, Not Six</div><p>This is the most important early tip. Build one team of 4 characters to a high level before branching out. Spreading resources thin is the most common beginner mistake. Pick one strong DPS, one healer, one support, and one flex unit.</p></div>
+    <div class="bgtip"><div class="bnum">04</div><div class="btitle">Level Up All Character Skills</div><p>All characters have multiple skill types you must level up individually: their basic attacks, ultimate attack, Critical Riposte, support skills, and passive skills that help the team. Leveling attributes alone is not enough. Each skill category scales your power independently, so invest in all of them as resources allow. Passives in particular can carry the whole team.</p></div>
+    <div class="bgtip"><div class="bnum">05</div><div class="btitle">Get an Apartment and the Boxer Anomaly</div><p>Get an apartment as soon as possible and unlock the Boxer Anomaly inside it. The Boxer Anomaly raises your Crit DMG directly, and when you earn medals you level it up for even more. There is a cap in the first apartment, but it is one of the best early sources of guaranteed Crit DMG in the game, no RNG required.</p></div>
+    <div class="bgtip"><div class="bnum">06</div><div class="btitle">Fish Early, Grind Fons Smart</div><p>Fish often. Around 80 fish early on can net you roughly 60,000 to 80,000 Fons. Do not rush to get the cafe first: it does not generate much income early. Once you have around 1 million Fons, which is doable in a day, get a good car and grab food at the vending machine so you can keep grinding. The grind itself also generates Fons quickly, so treat it as part of your daily loop.</p></div>
+    <div class="bgtip"><div class="bnum">07</div><div class="btitle">Story First, Side Content Second</div><p>Clear the main Episodes first. They unlock core systems and reward Annulith (pull currency), Beetle Coins, and Hunter EXP. Spinoffs (side quests) are secondary but still reward good resources. City Tycoon is fun but optional early on.</p></div>
+    <div class="bgtip"><div class="bnum">08</div><div class="btitle">Understand the Combat Loop</div><p>Basic attacks fill your Cycle Rate. When full, switching characters triggers their Esper Cycle (enhanced state). Hitting enemies depletes their Break Meter: fully breaking an enemy stuns them and boosts damage taken. Always dodge at the right moment to trigger a Critical Riposte counter.</p></div>
+    <div class="bgtip"><div class="bnum">09</div><div class="btitle">Gather Hunter's Guides and Beetle Coins</div><p>Hunter's Guides level up your Espers; Beetle Coins pay for leveling. Both come from Episodes, Spinoffs, Anomaly Dungeons, and Pilgrimages. Never let these sit uncollected, as they expire from daily sources if ignored.</p></div>
+    <div class="bgtip"><div class="bnum">10</div><div class="btitle">Hunter Level = Content Unlock</div><p>Your Hunter Level determines which Episodes and game modes you can access. Raise it consistently by completing quests. Your Appraisal Level increases enemy strength but also drop rewards, so push it when your team can handle the enemies.</p></div>
+    <div class="bgtip"><div class="bnum">11</div><div class="btitle">City Tycoon Boosts Combat Too</div><p>The City Tycoon mode (apartment, jobs, businesses) provides passive combat bonuses via apartment upgrades. These buffs are real and meaningful: unlock your apartment early and invest in it steadily. They compensate for gaps in your Module stats. Hathor will be hard to pull, but if you get her, you will get the Hamster Anomaly free, and you will get better odds at getting better modules. Just hunt down haunted vending machines to level the hamster up. There is a cap similarly to the Boxer Anomaly.</p></div>
+    <div class="bgtip"><div class="bnum">12</div><div class="btitle">Visit the Witch Daily</div><p>The Witch's House exchanges Oracle Stones for Annulith, EXP, and Fons. She also gives a daily Lost Tale quest, a party Bless, or a Treasure Hunt. Do this every single day: the compounding value is huge over weeks.</p></div>
+    <div class="bgtip"><div class="bnum">13</div><div class="btitle">Arcs Before Cartridges</div><p>Prioritize getting a good Arc (weapon) on your main DPS first. It provides a larger base stat boost than individual Module slots. Then collect Cartridge sets to activate 2-piece and 4-piece bonuses. Modules come last since they are RNG-dependent.</p></div>
+  </div>
+
+  <div class="card">
+    <h3>What is the Gacha System (Scarborough Fair)?</h3>
+    <p>NTE uses a gacha banner system called Scarborough Fair. S-rank Espers (characters) and Arcs are the top-tier pulls. The pity system guarantees an S-rank within a set number of pulls. The game offers a 50/50 mechanic: if you lose the 50/50, your next S-rank is guaranteed to be the featured character. Save your Annulith (pull currency) for characters you plan to build, not impulsively.</p>
+    <div class="warn"><strong>F2P Tip:</strong> You get a free S-rank Esper selector at launch. Use this wisely: check the tier list and pick a character whose playstyle you enjoy AND who synergizes with your other units.</div>
+  </div>
+
+  <div class="card">
+    <h3>Equipment Progression Order (Beginner Roadmap)</h3>
+    <div class="scroll-t"><table>
+      <thead><tr><th>Priority</th><th>What to Do</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>1st</td><td>Level your main DPS Arc to max</td><td>Biggest flat stat increase available early</td></tr>
+        <tr><td>2nd</td><td>Level your characters to current cap</td><td>Base stats scale all multipliers</td></tr>
+        <tr><td>3rd</td><td>Equip a matching Cartridge set (even B-rank)</td><td>2-piece bonus is immediate and free of RNG</td></tr>
+        <tr><td>4th</td><td>Fill Module slots with any stats</td><td>Any substat is better than empty slots</td></tr>
+        <tr><td>5th</td><td>Farm A-rank Cartridges for stronger bonuses</td><td>Better base stats on Modules inside A-rank sets</td></tr>
+        <tr><td>6th</td><td>Farm S-rank Cartridges and target good Module rolls</td><td>Endgame: high substat ceilings and best set effects</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Understanding Elements and Reactions</h3>
+    <p>Every character deals a specific elemental damage type: Psyche, Cosmos, Chaos, Anima, Lakshana, or Incantation. Some Cartridge set bonuses are triggered by elemental reactions: matching your character's element to their Cartridge set and watching for reaction windows (Nova, Scorch, Remora, Stain) is how you unlock the full power of your gear.</p>
+    <div class="scroll-t"><table>
+      <thead><tr><th>Element</th><th>Color</th><th>Key Characters</th><th>Reaction Trigger</th></tr></thead>
+      <tbody>
+        <tr><td style="color:#e879f9">Psyche</td><td>Pink/Purple</td><td>Fadia, Aurelia, Haniel</td><td>Nova, Stain</td></tr>
+        <tr><td style="color:#22d3ee">Cosmos</td><td>Cyan</td><td>Chiz, Hotori, Edgar</td><td>Cosmos-specific</td></tr>
+        <tr><td style="color:#fb923c">Chaos</td><td>Orange</td><td>Lacrimosa, Daffodill</td><td>Scorch, Nova</td></tr>
+        <tr><td style="color:#4ade80">Anima</td><td>Green</td><td>Jiuyuan, Nanally, Mint</td><td>Anima burst</td></tr>
+        <tr><td style="color:#fde047">Lakshana</td><td>Yellow</td><td>Hathor, Skia</td><td>Remora, Stain</td></tr>
+        <tr><td style="color:#a78bfa">Incantation</td><td>Purple</td><td>Baicang, Sakiri, Adler</td><td>Incantation AoE</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<!-- ==================== GOLDEN RULES ==================== -->
+<div class="sec wrap" id="golden">
+  <h2>Golden Rules of Building</h2>
+  <div class="rgrid">
+    <div class="rcard"><div class="rnum">01</div><div class="rtitle">Crit Rate &amp; Crit DMG Are King</div><div class="rtext">Target 70%+ Crit Rate and 140%+ Crit DMG before worrying about anything else on a DPS. These multiply everything else: a 10% Crit DMG gain on a high Crit Rate build outperforms a large flat ATK increase.</div></div>
+    <div class="rcard"><div class="rnum">02</div><div class="rtitle">Type DMG then DMG% then ATK%</div><div class="rtext">If a character's skills specify an element (e.g. Psyche DMG), prioritize that type's Cartridge set bonus. Then DMG%. Then ATK%. These are all multiplicative with each other when layered correctly.</div></div>
+    <div class="rcard"><div class="rnum">03</div><div class="rtitle">Level Base Stats First</div><div class="rtext">ATK%, Crit DMG, and DMG% all multiply your base ATK and HP. Level your character, Arc, and push Breakthrough before worrying about substat optimization. A poorly leveled character with good substats underperforms a leveled character with decent substats.</div></div>
+    <div class="rcard"><div class="rnum">04</div><div class="rtitle">Cartridge Rank Determines Substat Ceiling</div><div class="rtext">B-rank Cartridges give the lowest substat rolls. A-rank gives moderate. S-rank gives the highest possible substat values. The set effect is the same at all ranks, but the stats inside the Modules you slot in scale with Cartridge rank.</div></div>
+    <div class="rcard"><div class="rnum">05</div><div class="rtitle">Apartment Fills the Gaps</div><div class="rtext">Your apartment upgrades provide passive combat buffs that don't come from Modules at all. Don't compensate for bad Modules by wasting rolls on flat DEF or flat HP; let apartment perks and support characters cover survivability.</div></div>
+    <div class="rcard"><div class="rnum">06</div><div class="rtitle">Break Intensity Is Role-Specific</div><div class="rtext">Only invest in Break Intensity on characters whose skill descriptions explicitly reference Break DMG or Break reactions (primarily Daffodill). For all other DPS characters, treat Break Intensity rolls as wasted substat budget.</div></div>
+    <div class="rcard"><div class="rnum">07</div><div class="rtitle">ATK% vs HP%: Role Determines Priority</div><div class="rtext">DPS characters always want ATK%. Survival characters like Fadia want HP% because her mechanics scale with HP pool. Healers like Edgar benefit from HP% since heal output is partially HP-based. Never mix these priorities up.</div></div>
+    <div class="rcard"><div class="rnum">08</div><div class="rtitle">Match Arc Type to Character Arc Slot</div><div class="rtext">Each character uses a specific Arc type (Bose, Plasma, Liquid, Gas, Solid). You cannot equip any Arc on any character. Always check the Arc type before purchasing or pulling an Arc for someone.</div></div>
+  </div>
+
+  <div class="card">
+    <h3>Universal Stat Priority Pyramid — Offensive DPS</h3>
+    <div class="pyr">
+      <div class="pyr-r"><div class="pyr-b" style="width:200px;background:rgba(239,68,68,.13);border:1px solid rgba(239,68,68,.32);color:#fca5a5">★ CRIT RATE · CRIT DMG</div></div>
+      <div class="pyr-r"><div class="pyr-b" style="width:280px;background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.28);color:#fdba74">TYPE DMG% · DMG%</div></div>
+      <div class="pyr-r"><div class="pyr-b" style="width:360px;background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.22);color:#fde68a">ATK% · FLAT ATK</div></div>
+      <div class="pyr-r"><div class="pyr-b" style="width:430px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);color:#86efac">HP% · DEF% (survivability floor)</div></div>
+      <div class="pyr-r"><div class="pyr-b" style="width:500px;background:rgba(168,85,247,.06);border:1px solid rgba(168,85,247,.18);color:#d8b4fe">BREAK INTENSITY (breaker-specific)</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Damage Formula (Simplified)</h3>
+    <div class="formula">Final DMG = Base ATK × (1 + ATK%) × (1 + DMG%) × (1 + TypeDMG%) × CritMult × DEF_Factor
+<br><br>
+CritMult = 1 + (CritRate × CritDMG)
+Examples:
+  70% CR × 140% CD  →  +0.98 avg multiplier
+  100% CR × 200% CD →  +2.0 avg multiplier  ← endgame goal</div>
+    <p>Because Crit feeds into a separate multiplier layer that stacks with DMG% and ATK%, it has outsized value. Every % of Crit Rate you gain is worth more the higher your Crit DMG is, and vice versa, as they multiply each other.</p>
+  </div>
+</div>
+
+<!-- ==================== PLUG & PLAY ==================== -->
+<div class="sec wrap" id="plugplay">
+  <h2>Plug &amp; Play Quick Builds</h2>
+  <p>Find your character, grab the recommended Arc, Cartridge, and Module substat targets. No theory required: these are curated setups that work at each investment level.</p>
+  <div class="fbar">
+    <button class="fbtn active" onclick="filterPnP('all',this)">All</button>
+    <button class="fbtn" onclick="filterPnP('s',this)">S-Rank</button>
+    <button class="fbtn" onclick="filterPnP('a',this)">A-Rank</button>
+    <button class="fbtn" onclick="filterPnP('dps',this)">DPS</button>
+    <button class="fbtn" onclick="filterPnP('support',this)">Support/Tank</button>
+  </div>
+  <div id="pnp-list"></div>
+</div>
+
+<!-- ==================== CHARACTERS ==================== -->
+<div class="sec wrap" id="chars">
+  <h2>Character Build Guides</h2>
+  <p>Click any character to expand their full build guide. Each character has multiple build paths: tabs inside show S, A, and B-rank tiers so you always have something to work toward.</p>
+  <div class="fbar">
+    <button class="fbtn active" onclick="filterChars('all',this)">All</button>
+    <button class="fbtn" onclick="filterChars('s',this)">S-Rank</button>
+    <button class="fbtn" onclick="filterChars('a',this)">A-Rank</button>
+    <button class="fbtn" onclick="filterChars('dps',this)">DPS</button>
+    <button class="fbtn" onclick="filterChars('support',this)">Support</button>
+    <button class="fbtn" onclick="filterChars('tank',this)">Tank/Survival</button>
+    <button class="fbtn" onclick="filterChars('psyche',this)">Psyche</button>
+    <button class="fbtn" onclick="filterChars('cosmos',this)">Cosmos</button>
+    <button class="fbtn" onclick="filterChars('chaos',this)">Chaos</button>
+    <button class="fbtn" onclick="filterChars('anima',this)">Anima</button>
+    <button class="fbtn" onclick="filterChars('lakshana',this)">Lakshana</button>
+    <button class="fbtn" onclick="filterChars('incantation',this)">Incantation</button>
+  </div>
+  <div class="cgrid" id="char-grid"></div>
+</div>
+
+<!-- ==================== CARTRIDGES ==================== -->
+<div class="sec wrap" id="carts">
+  <h2>Cartridge Sets — All Ranks</h2>
+  <p>Cartridges come in B, A, and S ranks. The <strong style="color:var(--accent3)">set effect is identical at all ranks</strong>; S-rank Cartridges allow higher substat rolls on the Modules slotted inside them. Always work toward the S-rank version; use B and A as stepping stones.</p>
+  <div class="warn"><strong>Key Concept:</strong> A B-rank Cartridge with its 2-piece set bonus active is still better than no Cartridge. Equip the matching element Cartridge at whatever rank you have, then upgrade over time.</div>
+  <div style="margin-top:1.3rem" id="cart-grid"></div>
+</div>
+
+<!-- ==================== ARCS ==================== -->
+<div class="sec wrap" id="arcs">
+  <h2>Arcs (Weapons) — All Ranks</h2>
+  <p>Arcs are weapons. S-rank Arcs have the strongest passives and highest base stats. A-rank Arcs are strong alternatives that are far more accessible. B-rank Arcs are placeholder options for new players; replace them as soon as possible.</p>
+  <div class="fbar">
+    <button class="fbtn active" onclick="filterArcs('all',this)">All</button>
+    <button class="fbtn" onclick="filterArcs('S',this)">S-Rank</button>
+    <button class="fbtn" onclick="filterArcs('A',this)">A-Rank</button>
+    <button class="fbtn" onclick="filterArcs('B',this)">B-Rank</button>
+  </div>
+  <div class="agd" id="arc-grid"></div>
+</div>
+
+<!-- ==================== MODULES ==================== -->
+<div class="sec wrap" id="modules">
+  <h2>Modules — Understanding RNG Gear</h2>
+  <p>Modules are slotted inside Cartridges. They provide random substats: this is NTE's equivalent of Genshin artifact farming. The quality of substats you can roll is capped by the Module's rank (B, A, or S), which in turn is determined by the Cartridge rank they came from.</p>
+
+  <div class="modtier">
+    <div class="modbox"><div class="mk" style="color:var(--b)">B-Rank Module</div><p>Lowest substat values. 2-3 starting substats. Each upgrade adds small amounts. Use as filler while farming better gear. Good enough for story content.</p></div>
+    <div class="modbox"><div class="mk" style="color:var(--a)">A-Rank Module</div><p>Moderate substat values. 3-4 starting substats. Viable for mid-game and some endgame content. Upgrade these if you get good stat combinations (Crit Rate + Crit DMG + ATK%).</p></div>
+    <div class="modbox"><div class="mk" style="color:var(--s)">S-Rank Module</div><p>Highest possible substat values. 4 starting substats. Best for endgame. Farm these specifically: one perfect S-rank Module with Crit Rate + Crit DMG + ATK% + DMG% is worth keeping even if set bonus is off.</p></div>
+  </div>
+
+  <div class="card">
+    <h3>Module Types and Slot Shapes</h3>
+    <p>Modules come in different shapes (Type II, III, IV) that fit specific slots in a Cartridge's grid. You do not choose which stats a Module has: they are randomly determined when obtained. The shape determines which slot it fits; the rank determines the stat ceiling.</p>
+    <div class="scroll-t"><table>
+      <thead><tr><th>Module Type</th><th>Slots</th><th>Substat Count (S-rank)</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Type II</td><td>2-cell</td><td>Up to 4</td><td>Small footprint, often easier to fit</td></tr>
+        <tr><td>Type III</td><td>3-cell</td><td>Up to 4</td><td>Common type, most shapes available</td></tr>
+        <tr><td>Type IV</td><td>4-cell</td><td>Up to 4</td><td>Largest footprint, highest individual stat values</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>What Substats to Target</h3>
+    <div class="scroll-t"><table>
+      <thead><tr><th>Role</th><th>Ideal Substats (priority order)</th><th>Acceptable</th><th>Avoid</th></tr></thead>
+      <tbody>
+        <tr><td style="color:#fca5a5">Main DPS</td><td>Crit Rate → Crit DMG → ATK% → Type DMG% → DMG%</td><td>Flat ATK</td><td>Flat DEF, Break Int (unless breaker)</td></tr>
+        <tr><td style="color:#fb923c">Burst DPS</td><td>Crit DMG → ATK% → Crit Rate → DMG%</td><td>Type DMG%</td><td>HP%, Break Int</td></tr>
+        <tr><td style="color:#e9d5ff">Breaker</td><td>Break Int → ATK% → Crit DMG → Crit Rate</td><td>Type DMG%</td><td>Flat HP, Flat DEF</td></tr>
+        <tr><td style="color:#bbf7d0">Tank/Survival</td><td>HP% → DEF% → Flat HP</td><td>ATK%</td><td>Break Int, Crit (waste)</td></tr>
+        <tr><td style="color:#93c5fd">Buffer</td><td>ATK% → Charge Eff → Crit Rate → Crit DMG</td><td>Type DMG%</td><td>Break Int, flat stats</td></tr>
+        <tr><td style="color:#a5f3fc">Healer</td><td>HP% → Healing Bonus → ATK%</td><td>Crit Rate</td><td>Break Int, DEF%</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>Farming Efficiency Tips</h3>
+    <p>Do not re-roll or discard every Module immediately. An A-rank Module with Crit Rate + Crit DMG + ATK% is worth keeping even over an S-rank with HP% + DEF% + flat ATK. The combination of substats matters more than the raw rank alone at mid-game. At endgame, you want S-rank modules with the right combination.</p>
+    <div class="note"><strong>Best-in-Slot Target:</strong> S-rank Module in the correct Cartridge set with Crit Rate + Crit DMG + ATK% + Type DMG% as four substats. This is the dream roll: expect hundreds of farming runs to achieve it on multiple characters.</div>
+  </div>
+</div>
+
+<!-- ==================== DEEP DIVE ==================== -->
+<div class="sec wrap" id="deepdive">
+  <h2>Deep Dive: Advanced Optimization</h2>
+
+  <div class="ddblock">
+    <h3>Crit Rate vs Crit DMG — How to Balance</h3>
+    <p>The optimal Crit balance point depends on your current values. In general, if your Crit Rate is below 50%, prioritize Crit Rate over Crit DMG. Above 70%, prioritize Crit DMG. The marginal value of each changes as the other increases. A rough target for most DPS is 70% Crit Rate and 150%+ Crit DMG as a mid-game goal, with 100% CR and 200%+ CD as endgame.</p>
+    <div class="formula">Expected Crit Contribution = CritRate × CritDMG
+70% CR × 150% CD  = 1.05  (solid mid-game)
+85% CR × 170% CD  = 1.445 (strong)
+100% CR × 200% CD = 2.0   (endgame cap)</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>Break Mechanics Deep Dive</h3>
+    <p>When you deplete an enemy's Break Meter, they enter a Broken state: they cannot move or attack, and all damage they receive is amplified. Break Intensity increases how much you deplete the Break Meter per hit. Characters like Daffodill have skills that add Insight during break, applying additional Break DMG that scales with Break Intensity. For everyone else, breaks are a bonus side effect, not a stat to build around.</p>
+    <div class="note"><strong>Breaker Team Tip:</strong> Pair Daffodill with a Chaos-element supporter for Scorch reactions to trigger the Diabolos Cartridge's full 24% RES reduction. The break window + RES shred combination is how Daffodill reaches her damage ceiling.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>Support/Buffer ATK Scaling</h3>
+    <p>Sakiri's Feast of Gluttony gives all allies an ATK boost calculated from her own base ATK. This means investing in Sakiri's ATK stat directly scales every teammate's damage. Her ATK% from Cartridge set stacks (Crimson: Twin Butterflies) and her Arc compound this effect. Build Sakiri for raw ATK% before anything else.</p>
+    <p>Hotori's World's Tide replays recorded ally skills: the replayed damage uses Hotori's own stats for the Cosmos portion. So Hotori benefits from both her own Cosmos DMG% investment AND the teammate's stats at the time of recording. She is effectively a dual-scaling support.</p>
+  </div>
+
+  <div class="ddblock">
+    <h3>DoT vs Direct Damage — Lacrimosa Example</h3>
+    <p>Lacrimosa's Nightmare DoT ticks do not always Crit the same way direct attacks do in all DoT implementations. Because of this, her priority shifts toward ATK% first (which scales the DoT tick value directly) before Crit. Her direct hits from Wordless attacks do benefit from Crit normally. This split-priority makes her unusual among DPS characters.</p>
+  </div>
+
+  <div class="ddblock">
+    <h3>ETD-4 vs Eibon Faction Synergy</h3>
+    <p><strong style="color:var(--accent3)">ETD-4 (Baicang, Fadia, Lacrimosa, Skia)</strong>: Running multiple ETD-4 members together triggers passive cooperative attacks. Baicang's Moderate Working passive fires unique combo attacks when paired with Skia (stealth entry), Fadia (HP threshold), or Lacrimosa (bat form switch). This effectively adds free damage with no stamina cost and rewards faction-stacking.</p>
+    <p><strong style="color:var(--accent3)">Eibon (Hotori, Daffodill, Nanally, Sakiri, Adler, Edgar)</strong>: Eibon composition benefits from Sakiri as a dedicated ATK buffer. She amplifies the entire Eibon roster and synergizes with Adler's shielding to create a self-sustaining offensive-support loop.</p>
+    <div class="note"><strong>Recommendation:</strong> Build your first team around a full or partial faction (3+ members from one faction) to unlock passive synergy bonuses on top of your gear investment.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>Charge Efficiency — When Does It Matter?</h3>
+    <p>Charge Efficiency reduces the number of attacks needed to fill your Ultimate gauge. For characters whose ultimates are core to their damage (Hotori's World's Tide, Hathor's Emergency Delivery) or whose buffs are delivered through ultimates (Sakiri's Feast of Gluttony, Speedy Hedgehog's 4-piece team ATK), Charge Efficiency is a legitimate 4th or 5th priority substat on top of the standard Crit/ATK build. For pure DPS who use ultimates as part of a rotation but do not depend on them to buff the team, it is lower priority.</p>
+  </div>
+
+  <div class="ddblock">
+    <h3>Full Comparative Priority Table by Role</h3>
+    <div class="scroll-t"><table>
+      <thead><tr><th>Role</th><th>Example Characters</th><th>Priority 1</th><th>Priority 2</th><th>Priority 3</th><th>Priority 4</th><th>Skip</th></tr></thead>
+      <tbody>
+        <tr><td style="color:#fca5a5">Main DPS (Crit)</td><td>Nanally, Chiz, Jiuyuan, Hathor, Mint, Skia</td><td>Crit Rate</td><td>Crit DMG</td><td>Type DMG%</td><td>ATK%</td><td>Break Int, DEF%</td></tr>
+        <tr><td style="color:#fb923c">DoT DPS</td><td>Lacrimosa</td><td>ATK%</td><td>Chaos DMG%</td><td>Crit Rate</td><td>Crit DMG</td><td>Break Int, DEF%</td></tr>
+        <tr><td style="color:#e9d5ff">Breaker DPS</td><td>Daffodill</td><td>Break Int</td><td>Crit DMG</td><td>Crit Rate</td><td>Chaos DMG%</td><td>HP%, DEF%</td></tr>
+        <tr><td style="color:#fde68a">Burst DPS</td><td>Baicang</td><td>Incant DMG%</td><td>Crit Rate</td><td>Crit DMG</td><td>ATK%</td><td>Break Int</td></tr>
+        <tr><td style="color:#bbf7d0">Survival/Tank</td><td>Fadia</td><td>HP%</td><td>Flat HP</td><td>ATK%</td><td>Psyche DMG%</td><td>Break Int</td></tr>
+        <tr><td style="color:#93c5fd">ATK Buffer</td><td>Sakiri, Hotori</td><td>ATK%</td><td>Type DMG%</td><td>Charge Eff</td><td>Crit Rate</td><td>Break Int, DEF%</td></tr>
+        <tr><td style="color:#86efac">Shield/DoT Support</td><td>Adler</td><td>DEF%</td><td>HP%</td><td>ATK%</td><td>Incant DMG%</td><td>Break Int, Crit</td></tr>
+        <tr><td style="color:#a5f3fc">Healer</td><td>Edgar</td><td>HP%</td><td>Healing Bonus</td><td>ATK%</td><td>Cosmos DMG%</td><td>Break Int, DEF%</td></tr>
+        <tr><td style="color:#fca5a5">A-Rank DPS</td><td>Aurelia, Mint, Skia</td><td>Crit Rate</td><td>Crit DMG</td><td>Type DMG%</td><td>ATK%</td><td>Break Int</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+
+<script>
+const EC = (e) => e.charAt(0).toUpperCase()+e.slice(1);
+const EL = {psyche:'#c026d3',cosmos:'#0891b2',chaos:'#ea580c',anima:'#16a34a',lakshana:'#ca8a04',incantation:'#7c3aed'};
+const elc = e => EL[e]||'#6b7280';
+const ini = n => n.split(' ').map(w=>w[0]).join('').substring(0,2).toUpperCase();
+
+const CHARS = [
+  {id:'fadia',name:'Fadia',rank:'s',element:'psyche',role:'tank',roleTag:'Survival / DMG Redirect',faction:'ETD-4',
+   playstyle:'Fadia redirects incoming damage from teammates to herself before shield mitigation. Her Existence skill shares damage back to enemies. Her Agony to Euphoria ultimate enters Lilith state, dealing Mental DMG and restoring HP: power scales with lost HP at cast time. The Destructive Threshold mechanic auto-refills her ultimate when lost HP hits the threshold, enabling repeated ultimates in long fights.',
+   builds:[
+     {label:'S-Rank (Best)',tab:'s',
+      arc:{name:'Fluff of Fortitude (S)',desc:'HP-scaling Arc. Maximizes the HP pool that her Destructive Threshold and ultimate heal both scale from.'},
+      arcAlt:'Camellia Society (S) if prioritizing occasional damage',
+      cart:{name:"Tiny Big Adventure (S)",twoPc:'HP +10%',fourPc:'Max HP +4% per hit (up to 10 stacks). Ultimate grants 10 stacks instantly.'},
+      cartAlt:"Thea's Night Tavern (S) for healers-support hybrid role",
+      stats:[{l:'HP%',c:'php',n:1},{l:'Flat HP',c:'php',n:2},{l:'ATK%',c:'patk',n:3},{l:'Psyche DMG%',c:'ptype',n:4},{l:'Crit Rate',c:'pcrit',n:5},{l:'Crit DMG',c:'pcdmg',n:6}],
+      note:'Her ultimate damage and heal BOTH scale with lost HP at cast time, so a massive HP pool directly makes her hit harder AND recover more. Never build DEF on modules; let the pool do the work.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Fluff of Fortitude (S) or Umbrella (A)',desc:'Umbrella is the best accessible A-rank option for HP-primary builds.'},
+      arcAlt:'The Fools Spring (A) as budget fallback',
+      cart:{name:"Tiny Big Adventure (A)",twoPc:'HP +10%',fourPc:'Max HP +4% per hit (up to 10 stacks): same effect, lower substat rolls on modules.'},
+      cartAlt:"Kingdom's Guard (A) if you need shield strength",
+      stats:[{l:'HP%',c:'php',n:1},{l:'Flat HP',c:'php',n:2},{l:'ATK%',c:'patk',n:3},{l:'DEF%',c:'pdef',n:4}],
+      note:'A-rank version of the same strategy. HP substats over everything. Even modest HP rolls are worthwhile at this stage.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Be Happy (B) / First Step to Success (B)',desc:'B-rank survival options. Focus on any stat that isnt Crit: HP or DEF.'},
+      arcAlt:'Any B-rank Arc in her slot type',
+      cart:{name:"Tiny Big Adventure (B) or Kingdom's Guard (B)",twoPc:'HP +10% or DEF +15%',fourPc:'Lower values than higher ranks but still active.'},
+      cartAlt:'Any 2-piece matching set for the bonus',
+      stats:[{l:'HP%',c:'php',n:1},{l:'Flat HP',c:'php',n:2},{l:'DEF%',c:'pdef',n:3}],
+      note:'At B-rank tier just fill slots and get any 2-piece bonus active. Fadia is naturally tanky enough to function on low-quality gear in early story content.'}
+   ]},
+  {id:'baicang',name:'Baicang',rank:'s',element:'incantation',role:'dps',roleTag:'Burst DPS / Control',faction:'ETD-4',
+   playstyle:'Baicang generates Power Words (Curse, Bless, Objurgate) through basic attacks and skills, then detonates them inside his Contemplative Domain ultimate for massive burst. He self-damages to fuel his mechanics. His Moderate Working passive triggers cooperative attacks with ETD-4 teammates.',
+   builds:[
+     {label:'S-Rank Burst',tab:'s',
+      arc:{name:'Contemplative Cat (S)',desc:'Incantation ATK scaling Arc. Purpose-built for his Power Word detonation burst window.'},
+      arcAlt:'Youthful Fantasy (S) for more consistent ATK scaling',
+      cart:{name:'Crimson: Twin Butterflies (S)',twoPc:'Incantation DMG +10%',fourPc:'ATK +6% per stack (up to 6) when nearby enemies take Incantation DMG.'},
+      cartAlt:'Shadow Creed (S) for flat 25% ATK burst on Skill cast',
+      stats:[{l:'Incant DMG%',c:'ptype',n:1},{l:'Crit Rate',c:'pcrit',n:2},{l:'Crit DMG',c:'pcdmg',n:3},{l:'ATK%',c:'patk',n:4}],
+      note:'His 20% passive ATK bonus makes ATK% investment compound harder than on most characters. Twin Butterflies stacking up to +36% ATK during his ultimate window is his damage ceiling.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Mind Royale (A)',desc:'Crit Rate boost Arc; helps reach the 70% threshold without sacrificing other substats.'},
+      arcAlt:'Drawn Blade (A) for raw ATK if Crit Rate is fine',
+      cart:{name:'Crimson: Twin Butterflies (A)',twoPc:'Incantation DMG +10%',fourPc:'Same effect, lower module substat ceiling.'},
+      cartAlt:'Shadow Creed (A) for 25% ATK on Skill',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Incant DMG%',c:'ptype',n:2},{l:'ATK%',c:'patk',n:3},{l:'Crit DMG',c:'pcdmg',n:4}],
+      note:'At A-rank prioritize reaching Crit Rate 70% first. The burst damage floor is still strong with A-rank gear.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Dangerous Game (B) / Real Music (B)',desc:'B-rank filler. Any Arc in his type slot; prioritize leveling it as fast as possible.'},
+      arcAlt:'Us. (B) as budget option',
+      cart:{name:'Crimson: Twin Butterflies (B)',twoPc:'Incantation DMG +10%',fourPc:'Same effect at reduced substat quality.'},
+      cartAlt:'Shadow Creed (B) 2pc for +10% ATK',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Crit Rate',c:'pcrit',n:2},{l:'Incant DMG%',c:'ptype',n:3}],
+      note:'Even B-rank Twin Butterflies gives the Incantation DMG 2pc. Prioritize that set immediately and level the Arc as the main goal.'}
+   ]},
+  {id:'chiz',name:'Chiz',rank:'s',element:'cosmos',role:'dps',roleTag:'Main DPS / Market Burst',faction:'Dvorak Family',
+   playstyle:'Chiz stacks Grain currency via basic attacks and skills. Her ultimate enters the Grain Market state: her first Grain Settlement hit is always a guaranteed Crit, making Crit DMG exceptionally valuable for that spike. She is a rotation-based burst DPS who rewards precise skill timing.',
+   builds:[
+     {label:'S-Rank Crit',tab:'s',
+      arc:{name:'Day Off (S)',desc:'Cosmos-type Arc tuned for Grain Market synergy and ultimate-window burst.'},
+      arcAlt:'Good Boys Grand Adventure (S) for follow-up DMG bonus',
+      cart:{name:'Lost Radiance (S)',twoPc:'Cosmos DMG +10%',fourPc:'Ignore 25% enemy DEF for 20s after casting Ultimate.'},
+      cartAlt:'Shadow Creed (S) if below 70% Crit Rate',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Cosmos DMG%',c:'ptype',n:3},{l:'DMG%',c:'pdmg',n:4},{l:'ATK%',c:'patk',n:5}],
+      note:'Her guaranteed Crit on first Grain Settlement means Crit DMG has disproportionately high value. Stack Crit DMG over Crit Rate once you reach 70% CR. Lost Radiance 4pc DEF ignore stacks with Cosmos DMG% for massive burst windows.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Cosmos Daze Wild Reverie (A)',desc:'Cosmos A-rank Arc for accessible Cosmos scaling.'},
+      arcAlt:'Shiny Days (A) for general ATK support',
+      cart:{name:'Lost Radiance (A)',twoPc:'Cosmos DMG +10%',fourPc:'Same DEF ignore effect at lower substat values.'},
+      cartAlt:'Shadow Creed (A) 4pc for 25% ATK on Skill',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Cosmos DMG%',c:'ptype',n:3},{l:'ATK%',c:'patk',n:4}],
+      note:'A-rank still gives the DEF ignore effect which is very strong. Focus on reaching 70% CR with available substats.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'First Step to Success (B)',desc:'B-rank starter Arc. Replace with A-rank Cosmos Arc as soon as available.'},
+      arcAlt:'Any B-rank in her Arc type',
+      cart:{name:'Lost Radiance (B)',twoPc:'Cosmos DMG +10%',fourPc:'DEF ignore effect active even at B rank.'},
+      cartAlt:'Shadow Creed (B) for 10% ATK 2pc',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Crit Rate',c:'pcrit',n:2},{l:'Cosmos DMG%',c:'ptype',n:3}],
+      note:'Get the Lost Radiance 2pc active immediately; +10% Cosmos DMG for free is meaningful even at B-rank.'}
+   ]},
+  {id:'daffodill',name:'Daffodill',rank:'s',element:'chaos',role:'dps',roleTag:'Burst DPS / Breaker',faction:'Eibon Antique Shop',
+   playstyle:'Daffodill is a breaker-burst hybrid. Her Finale ultimate enters a state where she applies Insight to enemies and gains Phantom Step charges. Breaking enemies with Insight active deals massive bonus damage scaling with Break Intensity. She also has a parry mechanic that rewards skillful play with extra charges.',
+   builds:[
+     {label:'S-Rank Breaker',tab:'s',
+      arc:{name:'Eternal Waltz (S)',desc:'Chaos dual-arc with break/crit synergy. Best overall S-rank choice for her kit.'},
+      arcAlt:'Fluff of Fearlessness (S) for pure Break Intensity focus',
+      cart:{name:'Diabolos (S)',twoPc:'Chaos DMG +10%',fourPc:'Ignore 12% Chaos RES. After Nova/Scorch reaction: ignore 24% for 20s.'},
+      cartAlt:'Shadow Creed (S) if Crit-focused over Break',
+      stats:[{l:'Break Int',c:'pbrk',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Crit Rate',c:'pcrit',n:3},{l:'Chaos DMG%',c:'ptype',n:4},{l:'ATK%',c:'patk',n:5}],
+      note:'Break Intensity is her PRIMARY stat unlike any other character. Her Insight application during Finale means Break DMG during the broken window can account for 40-60% of her total damage. Diabolos 4pc RES shred during Scorch reactions compounds the break burst significantly.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'The Good The Bad The Bitter (A)',desc:'Good A-rank option for Chaos/break builds.'},
+      arcAlt:'Drawn Blade (A) for raw ATK if Break Int is already high',
+      cart:{name:'Diabolos (A)',twoPc:'Chaos DMG +10%',fourPc:'Same RES ignore effect at lower module substat quality.'},
+      cartAlt:'Shadow Creed (A) for burst ATK window',
+      stats:[{l:'Break Int',c:'pbrk',n:1},{l:'ATK%',c:'patk',n:2},{l:'Crit DMG',c:'pcdmg',n:3},{l:'Chaos DMG%',c:'ptype',n:4}],
+      note:'At A-rank still prioritize Break Intensity first. The Diabolos 2pc Chaos DMG bonus is active and meaningful even here.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Dangerous Game (B)',desc:'B-rank placeholder. Get to A-rank Chaos Arc as fast as possible.'},
+      arcAlt:'Be Happy (B) for general use',
+      cart:{name:'Diabolos (B)',twoPc:'Chaos DMG +10%',fourPc:'RES ignore effect at lowest tier.'},
+      cartAlt:'Shadow Creed (B) for 10% ATK',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Break Int',c:'pbrk',n:2},{l:'Chaos DMG%',c:'ptype',n:3}],
+      note:'Even at B-rank Diabolos 2pc is worth equipping immediately. Her parry mechanic works independently of gear quality so practice the skill: it is not stat-gated.'}
+   ]},
+  {id:'hathor',name:'Hathor',rank:'s',element:'lakshana',role:'dps',roleTag:'Burst DPS / Stack',faction:'Sterry Express',
+   playstyle:'Hathor stacks Express Delivery Power charges through attacks. Her ultimate enters Emergency Delivery state where ATK scales with charge stacks, culminating in Cyclone Strike. She wants high Crit to amplify the stacked ATK multiplier during her burst window.',
+   builds:[
+     {label:'S-Rank Crit Burst',tab:'s',
+      arc:{name:'Ready-Ready (S)',desc:'Lakshana burst Arc that complements Emergency Delivery ATK stack scaling.'},
+      arcAlt:'Fluff of Fleetness (S) for speed + burst hybrid',
+      cart:{name:'Street Boxer (S)',twoPc:'Lakshana DMG +10%',fourPc:'Crit Chance +14%. Boosted during Remora/Stain reactions.'},
+      cartAlt:'Shadow Creed (S) if below 65% Crit Rate',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Lakshana DMG%',c:'ptype',n:3},{l:'ATK%',c:'patk',n:4}],
+      note:'Street Boxer is best-in-slot because the 14% Crit Rate bonus directly amplifies the value of her stacked ATK during Emergency Delivery. The stacked ATK feeds into the Crit multiplier, making every % of Crit Rate worth more than on most characters.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Watch Your Heads! (A)',desc:'Lakshana A-rank option. Best accessible choice for her element.'},
+      arcAlt:'A Time Will Come (A) for general use',
+      cart:{name:'Street Boxer (A)',twoPc:'Lakshana DMG +10%',fourPc:'Crit Rate +14% effect active at lower substat values.'},
+      cartAlt:'Shadow Creed (A) for 25% ATK on Skill',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'ATK%',c:'patk',n:3},{l:'Lakshana DMG%',c:'ptype',n:4}],
+      note:'Street Boxer A-rank 4pc still gives the 14% Crit bonus: very strong even at this tier.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'First Step to Success (B)',desc:'B-rank starter. Replace quickly.'},
+      arcAlt:'Be Happy (B)',
+      cart:{name:'Street Boxer (B)',twoPc:'Lakshana DMG +10%',fourPc:'Crit Rate bonus active.'},
+      cartAlt:'Shadow Creed (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Crit Rate',c:'pcrit',n:2},{l:'Lakshana DMG%',c:'ptype',n:3}],
+      note:'Street Boxer 2pc is worth equipping at any rank. The +10% Lakshana DMG is free and immediate.'}
+   ]},
+  {id:'hotori',name:'Hotori',rank:'s',element:'cosmos',role:'support',roleTag:'Buffer / Sub-DPS',faction:'Eibon Antique Shop',
+   playstyle:'Hotori records ally skills with Present Replay and replays them during her World\'s Tide time-stop ultimate. The replayed damage uses her own stats for the Cosmos portion, making her a hybrid carry-support. She also buffs teammates through her ultimate window.',
+   builds:[
+     {label:'S-Rank DPS Support',tab:'s',
+      arc:{name:'Marching Beyond Time (S)',desc:'Cosmos replay synergy Arc. Maximizes damage during time-stop window.'},
+      arcAlt:'Speedy Hedgehog approach: use Speedy Hedgehog cart instead and take any Cosmos Arc',
+      cart:{name:'Lost Radiance (S)',twoPc:'Cosmos DMG +10%',fourPc:'Ignore 25% enemy DEF for 20s after Ultimate.'},
+      cartAlt:'Speedy Hedgehog (S) for 15% team ATK buff on ultimate (team-first priority)',
+      stats:[{l:'Cosmos DMG%',c:'ptype',n:1},{l:'Crit Rate',c:'pcrit',n:2},{l:'Crit DMG',c:'pcdmg',n:3},{l:'Charge Eff',c:'pchrg',n:4},{l:'ATK%',c:'patk',n:5}],
+      note:'Choose Lost Radiance when you want her to output personal damage. Choose Speedy Hedgehog when your team needs the 15% ATK buff more than her self-damage. In most comps the team ATK buff wins.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Cosmos Daze Wild Reverie (A)',desc:'Accessible Cosmos A-rank. Solid stats for her role.'},
+      arcAlt:'Shiny Days (A) for hybrid support',
+      cart:{name:'Lost Radiance (A)',twoPc:'Cosmos DMG +10%',fourPc:'25% DEF ignore after ultimate.'},
+      cartAlt:'Speedy Hedgehog (A) for team ATK buff',
+      stats:[{l:'Cosmos DMG%',c:'ptype',n:1},{l:'Charge Eff',c:'pchrg',n:2},{l:'ATK%',c:'patk',n:3},{l:'Crit Rate',c:'pcrit',n:4}],
+      note:'Charge Efficiency rises in priority at A-rank since you have fewer strong substat options: getting her ultimate out more often compensates for lower raw stats.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Be Happy (B)',desc:'General B-rank placeholder.'},
+      arcAlt:'Any B-rank in her slot type',
+      cart:{name:'Speedy Hedgehog (B)',twoPc:'Charge Eff +12%',fourPc:'Team ATK +15% on ultimate: same effect even at B rank.'},
+      cartAlt:'Lost Radiance (B) for Cosmos DMG',
+      stats:[{l:'Charge Eff',c:'pchrg',n:1},{l:'ATK%',c:'patk',n:2},{l:'Cosmos DMG%',c:'ptype',n:3}],
+      note:'Speedy Hedgehog B-rank 4pc gives the full team ATK buff: the effect does not scale with rank, making it uniquely strong at B-rank relative to other sets.'}
+   ]},
+  {id:'jiuyuan',name:'Jiuyuan',rank:'s',element:'anima',role:'dps',roleTag:'Burst DPS / Multi-Target',faction:'Sterry Express',
+   playstyle:'Jiuyuan establishes Lethal Rose Pact marks on enemies through attacks and skills. Her Final Reckoning ultimate simultaneously detonates all Pact Settlements, dealing massive multi-target Anima burst. The Fireflies Cartridge synergizes directly with her multi-hit Anima pattern to stack Crit DMG rapidly.',
+   builds:[
+     {label:'S-Rank Crit',tab:'s',
+      arc:{name:'The Last Rose (S)',desc:'Anima execution Arc. Syncs with Pact Settlement burst theme.'},
+      arcAlt:'Fluff of Ferocity (S) for Crit DMG stacking',
+      cart:{name:'Fireflies and the Forest (S)',twoPc:'Anima DMG +10%',fourPc:'CRIT DMG +8% per stack (up to 7) when enemies take Anima DMG from team.'},
+      cartAlt:'Shadow Creed (S) if not hitting Crit Rate 70%',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Anima DMG%',c:'ptype',n:3},{l:'ATK%',c:'patk',n:4}],
+      note:'Fireflies is exceptional here: her kit hits enemies multiple times with Anima DMG per rotation, rapidly stacking the 4pc Crit DMG bonus toward the maximum 56% bonus. This alone can push her Crit DMG 50%+ higher than base.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Clear Skies (A)',desc:'Good general A-rank Arc for DPS builds.'},
+      arcAlt:'Drawn Blade (A) for pure ATK',
+      cart:{name:'Fireflies and the Forest (A)',twoPc:'Anima DMG +10%',fourPc:'Same Crit DMG stacking at lower module quality.'},
+      cartAlt:'Shadow Creed (A) for ATK burst',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'ATK%',c:'patk',n:3},{l:'Anima DMG%',c:'ptype',n:4}],
+      note:'Fireflies A-rank still stacks Crit DMG: the 4pc effect value does not change, only the underlying module substat ceiling drops.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Dangerous Game (B)',desc:'Starter Arc placeholder.'},
+      arcAlt:'First Step to Success (B)',
+      cart:{name:'Fireflies and the Forest (B)',twoPc:'Anima DMG +10%',fourPc:'Crit DMG stack effect active.'},
+      cartAlt:'Shadow Creed (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Crit Rate',c:'pcrit',n:2},{l:'Anima DMG%',c:'ptype',n:3}],
+      note:'Get Fireflies 2pc immediately for the +10% Anima DMG. Even at B-rank this is a free permanent boost.'}
+   ]},
+  {id:'lacrimosa',name:'Lacrimosa',rank:'s',element:'chaos',role:'dps',roleTag:'Main DPS / DoT',faction:'ETD-4',
+   playstyle:'Lacrimosa applies Nightmare DoT through nearly every attack. She has two forms (Tomato Metal / Tomato Percussion) and can absorb enemy skills. Her DoT scales primarily with ATK rather than Crit, making her stat priority unusual: ATK first, then transition to Crit for her direct hits.',
+   builds:[
+     {label:'S-Rank DoT Focus',tab:'s',
+      arc:{name:'Blow up the Crowd (S)',desc:'Chaos AoE/DoT amplification Arc. Best choice for her multi-hit DoT pattern.'},
+      arcAlt:'Youthful Fantasy (S) for consistent ATK baseline',
+      cart:{name:'Diabolos (S)',twoPc:'Chaos DMG +10%',fourPc:'Ignore 12-24% Chaos RES after reactions.'},
+      cartAlt:'Shadow Creed (S) for Skill-cast 25% ATK burst',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Chaos DMG%',c:'ptype',n:2},{l:'Crit Rate',c:'pcrit',n:3},{l:'Crit DMG',c:'pcdmg',n:4},{l:'DMG%',c:'pdmg',n:5}],
+      note:'ATK% outranks Crit here because Nightmare DoT ticks scale purely with ATK. Her direct attack hits benefit from Crit but they are secondary. Build ATK first until you have comfortable DoT output, then layer Crit on top.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'The Forgotten (A)',desc:'Good A-rank for Chaos DPS builds.'},
+      arcAlt:'Drawn Blade (A) for raw ATK',
+      cart:{name:'Diabolos (A)',twoPc:'Chaos DMG +10%',fourPc:'RES ignore active at lower substat quality.'},
+      cartAlt:'Shadow Creed (A)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Chaos DMG%',c:'ptype',n:2},{l:'Crit Rate',c:'pcrit',n:3}],
+      note:'Same priority at A-rank. ATK% above all. The Diabolos 2pc is still free Chaos DMG.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Real Music (B)',desc:'B-rank starter option.'},
+      arcAlt:'Be Happy (B)',
+      cart:{name:'Diabolos (B)',twoPc:'Chaos DMG +10%',fourPc:'RES ignore at B-rank.'},
+      cartAlt:'Shadow Creed (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Chaos DMG%',c:'ptype',n:2}],
+      note:'Focus exclusively on ATK% at B-rank. Her DoT damage at this stage is primarily ATK-driven and benefits more from raw ATK than any other substat.'}
+   ]},
+  {id:'nanally',name:'Nanally',rank:'s',element:'anima',role:'dps',roleTag:'Main DPS / Follow-up',faction:'Eibon Antique Shop',
+   playstyle:'Nanally brawls in melee with her claws and Heavy Hitter combos. Her ultimate summons Underboss who mirrors all her attacks as follow-up damage, effectively doubling her hit count. Crit-focused builds shine because every doubled hit from Underboss also inherits her Crit values.',
+   builds:[
+     {label:'S-Rank Crit',tab:'s',
+      arc:{name:'Fluff of Ferocity (S)',desc:'Crit DMG stacking Arc: every hit while Underboss is active builds stacks at double rate.'},
+      arcAlt:"Good Boy's Grand Adventure (S) for follow-up amplification",
+      cart:{name:'Fireflies and the Forest (S)',twoPc:'Anima DMG +10%',fourPc:'CRIT DMG +8% per stack up to 7: stacks twice as fast thanks to Underboss mirrors.'},
+      cartAlt:'Shadow Creed (S)',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Anima DMG%',c:'ptype',n:3},{l:'ATK%',c:'patk',n:4}],
+      note:'Underboss doubles her effective hit count, which doubles the rate at which she stacks Fireflies Crit DMG. This makes Fireflies even stronger on her than on Jiuyuan. Aim for 100% Crit Rate endgame since every mirrored hit that Crits is a huge win.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'A Time Will Come (A)',desc:'Good A-rank option for her sustained melee pattern.'},
+      arcAlt:'Drawn Blade (A)',
+      cart:{name:'Fireflies and the Forest (A)',twoPc:'Anima DMG +10%',fourPc:'Crit DMG stacking active.'},
+      cartAlt:'Shadow Creed (A)',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'ATK%',c:'patk',n:3},{l:'Anima DMG%',c:'ptype',n:4}],
+      note:'Nanally performs excellently at A-rank. Her Underboss mirror mechanic is not gear-dependent: it works at all gear levels.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'First Step to Success (B)',desc:'Any B-rank starter in her slot.'},
+      arcAlt:'Be Happy (B)',
+      cart:{name:'Fireflies and the Forest (B)',twoPc:'Anima DMG +10%',fourPc:'Crit DMG stacking.'},
+      cartAlt:'Shadow Creed (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Crit Rate',c:'pcrit',n:2}],
+      note:'Equip Fireflies B-rank for the immediate 2pc bonus. Nanally is one of the easier characters to play at low gear because Underboss damage is consistent regardless of rank.'}
+   ]},
+  {id:'sakiri',name:'Sakiri',rank:'s',element:'incantation',role:'support',roleTag:'Buffer / Control',faction:'Eibon Antique Shop',
+   playstyle:'Sakiri uses Kiroumaru for crowd control. Her Feast of Gluttony ultimate buffs the entire team ATK based on her own base ATK, making her ATK investment directly multiplicative for the whole team. She is an enabler whose own stats make everyone else stronger.',
+   builds:[
+     {label:'S-Rank Buffer',tab:'s',
+      arc:{name:'Your Happiness is Priceless (S)',desc:'ATK-scaling Arc. Every ATK% gain compounds into her team buff amount.'},
+      arcAlt:'Speedy Hedgehog approach: use Speedy Hedgehog cart and any Incantation S-rank Arc',
+      cart:{name:'Crimson: Twin Butterflies (S)',twoPc:'Incantation DMG +10%',fourPc:'ATK +6% per stack (up to 6): stacks translate into more team ATK from her ultimate.'},
+      cartAlt:'Speedy Hedgehog (S) for additional 15% team ATK on ultimate',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Incant DMG%',c:'ptype',n:2},{l:'Crit Rate',c:'pcrit',n:3},{l:'Crit DMG',c:'pcdmg',n:4}],
+      note:'Sakiri is the only character where ATK% investment explicitly scales your entire team\'s damage. Every 10% ATK she gains also increases the buff she provides through her ultimate. Build her ATK before considering her own Crit.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Failing You Heavy in My Heart (A)',desc:'Good A-rank support-oriented Arc option.'},
+      arcAlt:'Drawn Blade (A) for raw ATK',
+      cart:{name:'Speedy Hedgehog (A)',twoPc:'Charge Eff +12%',fourPc:'Team ATK +15% on ultimate: same effect at A-rank.'},
+      cartAlt:'Crimson: Twin Butterflies (A)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Charge Eff',c:'pchrg',n:2},{l:'Incant DMG%',c:'ptype',n:3}],
+      note:'At A-rank Speedy Hedgehog is worth considering over Crimson Butterflies since the team ATK buff on ultimate does not scale with rank; you get the full 15% at A-rank.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Be Happy (B)',desc:'B-rank placeholder.'},
+      arcAlt:'Us. (B)',
+      cart:{name:'Speedy Hedgehog (B)',twoPc:'Charge Eff +12%',fourPc:'Team ATK +15% on ultimate: FULL EFFECT at B-rank.'},
+      cartAlt:'Crimson: Twin Butterflies (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Charge Eff',c:'pchrg',n:2}],
+      note:'Speedy Hedgehog B-rank 4pc gives the complete team ATK buff. This is one of the best B-rank investments in the game; equip it immediately on Sakiri and never look back until S-rank is available.'}
+   ]},
+  {id:'adler',name:'Adler',rank:'a',element:'incantation',role:'support',roleTag:'Shield / DoT Support',faction:'Eibon Antique Shop',
+   playstyle:'Adler stacks Karma through attacks and expends it via Evil\'s Bane for a shield + DoT combo. He is a shielder who also outputs modest Incantation DoT. His shield potency increases with DEF and his DoT scales with ATK: it is a split-stat build.',
+   builds:[
+     {label:'S-Rank Shield',tab:'s',
+      arc:{name:'Fluff of Fortitude (S)',desc:'Survival Arc. Maximizes shield strength and Adler personal survivability.'},
+      arcAlt:'Call of the Twisted City (A) as accessible alternative',
+      cart:{name:"Kingdom's Guard (S)",twoPc:'DEF +15%',fourPc:'Shields increased by 20%.'},
+      cartAlt:"Thea's Night Tavern (S) for HP-based shielding",
+      stats:[{l:'DEF%',c:'pdef',n:1},{l:'HP%',c:'php',n:2},{l:'ATK%',c:'patk',n:3},{l:'Incant DMG%',c:'ptype',n:4}],
+      note:"Kingdom's Guard 4pc directly boosts his shield by 20%: this is his best-in-slot set. Mix DEF and ATK modules to balance shielding output with DoT damage."},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Call of the Twisted City (A)',desc:'Best accessible A-rank for support/defensive builds.'},
+      arcAlt:'Umbrella (A) for HP-focus',
+      cart:{name:"Kingdom's Guard (A)",twoPc:'DEF +15%',fourPc:'Shield +20%: same effect at A-rank.'},
+      cartAlt:"Thea's Night Tavern (A)",
+      stats:[{l:'DEF%',c:'pdef',n:1},{l:'HP%',c:'php',n:2},{l:'ATK%',c:'patk',n:3}],
+      note:"Kingdom's Guard 4pc is full strength at A-rank. This is one of the best value A-rank setups in the game."},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Us. (B)',desc:'B-rank general option. Replace with A-rank as soon as possible.'},
+      arcAlt:'Be Happy (B)',
+      cart:{name:"Kingdom's Guard (B)",twoPc:'DEF +15%',fourPc:'Shield +20%: active even at B-rank.'},
+      cartAlt:"Thea's Night Tavern (B)",
+      stats:[{l:'DEF%',c:'pdef',n:1},{l:'HP%',c:'php',n:2}],
+      note:"Kingdom's Guard B-rank still gives the shield boost. Equip it immediately: Adler's shield is useful at all stages."}
+   ]},
+  {id:'aurelia',name:'Aurelia',rank:'a',element:'psyche',role:'dps',roleTag:'Main DPS / AoE',faction:'Tamamochi Street',
+   playstyle:'Aurelia is a melee/jellyfish hybrid DPS. Her Cadenza state enhances her attacks with Psyche DMG. Her Canon Chorus ultimate pulls enemies together for AoE burst. A standard Crit DPS with Psyche typing: no unusual stat priorities.',
+   builds:[
+     {label:'S-Rank Crit',tab:'s',
+      arc:{name:"Devil's Blood: Curse signature approach: use S-rank Psyche Arc if available",desc:'Any S-rank Bose-type Arc improves her significantly.'},
+      arcAlt:'Fluff of Ferocity (S) for Crit DMG stacking',
+      cart:{name:"Devil's Blood: Curse (S)",twoPc:'Psyche DMG +10%',fourPc:'DMG +18%. Vs Nova/Stain targets: DMG +36%.'},
+      cartAlt:'Shadow Creed (S) if below 65% Crit Rate',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Psyche DMG%',c:'ptype',n:3},{l:'ATK%',c:'patk',n:4}],
+      note:"Devil's Blood 4pc gives a massive 36% DMG bonus against enemies with Nova or Stain reactions: if your team can reliably apply these, this is a significant damage spike."},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Oraora! (A)',desc:'Best accessible A-rank Arc for Aurelia. ATK-scaling Psyche build.'},
+      arcAlt:'Mind Royale (A) for Crit Rate support',
+      cart:{name:"Devil's Blood: Curse (A)",twoPc:'Psyche DMG +10%',fourPc:'DMG bonus active at A-rank.'},
+      cartAlt:'Shadow Creed (A)',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'ATK%',c:'patk',n:3},{l:'Psyche DMG%',c:'ptype',n:4}],
+      note:'Oraora! is her best A-rank Arc and is very accessible. Focus Crit Rate and Crit DMG: she is a standard Crit DPS.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Dangerous Game (B)',desc:'B-rank starter placeholder.'},
+      arcAlt:'First Step to Success (B)',
+      cart:{name:"Devil's Blood: Curse (B)",twoPc:'Psyche DMG +10%',fourPc:'DMG bonus active.'},
+      cartAlt:'Shadow Creed (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Crit Rate',c:'pcrit',n:2}],
+      note:"Get Devil's Blood 2pc immediately. As an A-rank character Aurelia does not need massive gear investment to perform well in story content."}
+   ]},
+  {id:'edgar',name:'Edgar',rank:'a',element:'cosmos',role:'support',roleTag:'Healer',faction:'Eibon Antique Shop',
+   playstyle:'Edgar is the team dedicated healer. Wild Current channeling continuously heals the lowest HP teammate. Finnegan\'s Wake creates a healing domain. His heal output is tied to HP and ATK stats. Pure sustain role: no damage investment needed until healing targets are met.',
+   builds:[
+     {label:'S-Rank Heal Max',tab:'s',
+      arc:{name:'Marching Beyond Time (S) or any HP-Cosmos S-rank Arc',desc:'HP-boosting Arc to maximize healing output. Any Cosmos S-rank works.'},
+      arcAlt:'Umbrella (A) if no S-rank available: still very good',
+      cart:{name:"Thea's Night Tavern (S)",twoPc:'HP +10%',fourPc:'Healing Bonus +20%.'},
+      cartAlt:"Tiny Big Adventure (S) for Max HP stacking",
+      stats:[{l:'HP%',c:'php',n:1},{l:'ATK%',c:'patk',n:2},{l:'Cosmos DMG%',c:'ptype',n:3},{l:'Crit Rate',c:'pcrit',n:4}],
+      note:"Thea's Night Tavern 4pc is best-in-slot for healers: +20% Healing Bonus is a direct multiplier on every tick of his Wild Current and domain heal. Do not invest in Crit beyond what naturally rolls."},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Umbrella (A)',desc:'HP-focused A-rank Arc. Best accessible choice for Edgar.'},
+      arcAlt:"The Fools' Spring (A)",
+      cart:{name:"Thea's Night Tavern (A)",twoPc:'HP +10%',fourPc:'Healing Bonus +20%: FULL EFFECT at A-rank.'},
+      cartAlt:"Tiny Big Adventure (A)",
+      stats:[{l:'HP%',c:'php',n:1},{l:'ATK%',c:'patk',n:2},{l:'Cosmos DMG%',c:'ptype',n:3}],
+      note:"Thea's Night Tavern A-rank 4pc gives the full Healing Bonus effect. Edgar is arguably one of the characters where A-rank gear is least punishing: the set effect matters more than substat quality for a healer."},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:"The Fools' Spring (A) or any B-rank HP Arc",desc:'Get Umbrella A-rank as your first goal. Any B-rank HP Arc until then.'},
+      arcAlt:'Be Happy (B)',
+      cart:{name:"Thea's Night Tavern (B)",twoPc:'HP +10%',fourPc:'Healing Bonus +20%: active at B-rank too.'},
+      cartAlt:"Tiny Big Adventure (B)",
+      stats:[{l:'HP%',c:'php',n:1},{l:'ATK%',c:'patk',n:2}],
+      note:"Thea's Night Tavern B-rank 4pc gives the full Healing Bonus. Edgar heals adequately at B-rank gear in early content. His limiting factor is usually HP pool, not substat quality."}
+   ]},
+  {id:'haniel',name:'Haniel',rank:'a',element:'psyche',role:'support',roleTag:'Support / Buffer',faction:'Unknown',
+   playstyle:'Haniel is an A-rank Psyche support character. Specific skill details were unavailable during data collection; build on standard Psyche support principles until more information is available.',
+   builds:[
+     {label:'S-Rank',tab:'s',
+      arc:{name:'Any S-rank Psyche Arc',desc:'Prioritize ATK% or HP% depending on whether Haniel buffs via ATK or HP scaling.'},
+      arcAlt:'Fluff of Finesse (S) for off-field utility',
+      cart:{name:"Devil's Blood: Curse (S)",twoPc:'Psyche DMG +10%',fourPc:'DMG bonus for Psyche team.'},
+      cartAlt:'Speedy Hedgehog (S) if kit involves team buff on ultimate',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Psyche DMG%',c:'ptype',n:2},{l:'HP%',c:'php',n:3}],
+      note:'Update this build when full skill data for Haniel is available. Based on his A-rank support designation, ATK% and Psyche DMG% are the safest initial investments.'},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Mind Royale (A)',desc:'Crit Rate and Psyche support A-rank Arc.'},
+      arcAlt:'Oraora! (A)',
+      cart:{name:"Devil's Blood: Curse (A)",twoPc:'Psyche DMG +10%',fourPc:'DMG bonus.'},
+      cartAlt:'Speedy Hedgehog (A)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Psyche DMG%',c:'ptype',n:2}],
+      note:'Standard Psyche A-rank approach until full kit data is available.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Any B-rank Arc in slot',desc:'Filler until A-rank available.'},
+      arcAlt:'Be Happy (B)',
+      cart:{name:"Devil's Blood: Curse (B)",twoPc:'Psyche DMG +10%',fourPc:'DMG bonus.'},
+      cartAlt:'Shadow Creed (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'HP%',c:'php',n:2}],
+      note:'Fill slots for now. Revisit when full Haniel build data is available from the community.'}
+   ]},
+  {id:'mint',name:'Mint',rank:'a',element:'anima',role:'dps',roleTag:'Main DPS / Melee',faction:'ETD-4 (CSU-2)',
+   playstyle:'Mint is a fast melee DPS with wind-based Anima attacks. Her Thunderous Whirlwind Slash ultimate deals multiple Anima DMG hits with a massive final strike. Her passive boosts DEF and interruption resistance while on-field: do not compensate for this with module stats.',
+   builds:[
+     {label:'S-Rank Crit',tab:'s',
+      arc:{name:'Fluff of Fleetness (S)',desc:'Speed + burst Arc that complements her fast melee style.'},
+      arcAlt:'Good Boys Grand Adventure (S) for Anima follow-up bonus',
+      cart:{name:'Fireflies and the Forest (S)',twoPc:'Anima DMG +10%',fourPc:'CRIT DMG +8% per stack up to 7.'},
+      cartAlt:'Shadow Creed (S) for ATK boost on Skill',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Anima DMG%',c:'ptype',n:3},{l:'ATK%',c:'patk',n:4}],
+      note:"Mint's passive DEF bonus means you genuinely do not need DEF substats: her natural tankiness is built in. Every module slot goes to offensive stats only."},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'The Great Thief (A)',desc:'Good F2P Crit/ATK Arc. Accessible and effective.'},
+      arcAlt:'Watch Your Heads! (A) if Anima Arc in same slot type',
+      cart:{name:'Fireflies and the Forest (A)',twoPc:'Anima DMG +10%',fourPc:'Crit DMG stacking active.'},
+      cartAlt:'Shadow Creed (A)',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'ATK%',c:'patk',n:3}],
+      note:'The Great Thief is her best accessible A-rank. Mint performs well at A-rank gear: her kit is mechanically strong independent of stat quality.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Be Happy (B)',desc:'B-rank starter. Replace with Great Thief A quickly.'},
+      arcAlt:'First Step to Success (B)',
+      cart:{name:'Fireflies and the Forest (B)',twoPc:'Anima DMG +10%',fourPc:'Crit DMG stacking.'},
+      cartAlt:'Shadow Creed (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Crit Rate',c:'pcrit',n:2}],
+      note:'Equip Fireflies immediately for the 2pc. Mint is a beginner-friendly A-rank DPS who does not need strong substats to clear early content.'}
+   ]},
+  {id:'skia',name:'Skia',rank:'a',element:'lakshana',role:'dps',roleTag:'Main DPS / Stealth',faction:'ETD-4',
+   playstyle:'Skia attaches Fang Thrusts to enemies and enters stealth via Shadow Hound Gnaw. His Pack ultimate amplifies all Fang Thrust damage and adds control effects. He has ETD-4 faction synergy with Baicang that triggers cooperative stealth attacks.',
+   builds:[
+     {label:'S-Rank Crit',tab:'s',
+      arc:{name:"Hethereau's Keeper (S)",desc:'Lakshana Arc with ETD-4 faction bonus. Best S-rank choice for his full kit.'},
+      arcAlt:'Ready-Ready (S) for pure Lakshana burst',
+      cart:{name:'Street Boxer (S)',twoPc:'Lakshana DMG +10%',fourPc:'Crit Rate +14%. Boosted during Remora/Stain reactions.'},
+      cartAlt:'Shadow Creed (S) for ATK burst on Skill',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'Lakshana DMG%',c:'ptype',n:3},{l:'ATK%',c:'patk',n:4}],
+      note:"Skia has low base HP: don't compensate with HP module stats. Run him in burst windows with Fadia or Adler providing shielding. His ETD-4 synergy with Baicang is a significant free damage bonus in that composition."},
+     {label:'A-Rank',tab:'a',
+      arc:{name:'Watch Your Heads! (A)',desc:'Best accessible Lakshana A-rank Arc for Skia.'},
+      arcAlt:'The Great Thief (A) as general Crit/ATK Arc',
+      cart:{name:'Street Boxer (A)',twoPc:'Lakshana DMG +10%',fourPc:'Crit Rate +14% active.'},
+      cartAlt:'Shadow Creed (A)',
+      stats:[{l:'Crit Rate',c:'pcrit',n:1},{l:'Crit DMG',c:'pcdmg',n:2},{l:'ATK%',c:'patk',n:3}],
+      note:'Street Boxer A-rank 4pc gives the full Crit Rate bonus. Skia benefits heavily from this set at any rank.'},
+     {label:'B-Rank (Starter)',tab:'b',
+      arc:{name:'Dangerous Game (B)',desc:'B-rank placeholder.'},
+      arcAlt:'Be Happy (B)',
+      cart:{name:'Street Boxer (B)',twoPc:'Lakshana DMG +10%',fourPc:'Crit Rate +14% active even at B-rank.'},
+      cartAlt:'Shadow Creed (B)',
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Crit Rate',c:'pcrit',n:2}],
+      note:'Street Boxer B-rank 4pc still gives the full Crit Rate boost. Equip it immediately.'}
+   ]},
+];
+
+const CARTS = [
+  {name:"Crimson: Twin Butterflies",type:'Plasma',element:'incantation',t2:'Incantation DMG +10%',t4:'Wearer ATK +6% per stack (up to 6 stacks) when nearby enemies take Incantation DMG from team.',who:'Baicang · Sakiri',bWho:'Incantation DMG reduced substat values',aWho:'Incantation DMG moderate substats'},
+  {name:"Devil's Blood: Curse",type:'Bose',element:'psyche',t2:'Psyche DMG +10%',t4:'Wearer DMG +18%. Bonus becomes 36% against enemies affected by Nova or Stain.',who:'Fadia (DPS) · Aurelia · Haniel',bWho:'Psyche DPS at starter level',aWho:'Psyche DPS mid-game'},
+  {name:'Diabolos',type:'Gas',element:'chaos',t2:'Chaos DMG +10%',t4:'Ignore 12% Chaos RES. After Nova/Scorch reaction: ignore 24% for 20s.',who:'Lacrimosa · Daffodill',bWho:'Chaos characters at entry level',aWho:'Chaos DPS mid-game'},
+  {name:'Fireflies and the Forest',type:'Liquid',element:'anima',t2:'Anima DMG +10%',t4:'CRIT DMG +8% per stack (up to 7) when enemies take Anima DMG from team. Stacks persist off-field.',who:'Jiuyuan · Nanally · Mint',bWho:'Anima characters starter',aWho:'Anima DPS mid-game'},
+  {name:'Lost Radiance',type:'Solid',element:'cosmos',t2:'Cosmos DMG +10%',t4:'Ignore 25% enemy DEF for 20s after wearer casts Ultimate.',who:'Chiz · Hotori (DPS) · Edgar',bWho:'Cosmos characters starter',aWho:'Cosmos DPS mid-game'},
+  {name:"Kingdom's Guard",type:'Seven',element:'defense',t2:'DEF +15%',t4:'Shields increased by 20%.',who:'Adler · Fadia (tank build)',bWho:'Tank/shield characters starter',aWho:'Tank/shield mid-game'},
+  {name:'Quiet Manor',type:'None',element:'psyche',t2:'Mental DMG +10%',t4:'Mental DMG Bonus +12% per Basic Attack, up to 3 stacks (6s each).',who:'Fadia (Lilith state Mental DMG build)',bWho:'Fadia starter Mental build',aWho:'Fadia mid-game Mental build'},
+  {name:'Shadow Creed',type:'Eight',element:'universal',t2:'ATK +10%',t4:'Wearer ATK +25% for 20s after casting Skill.',who:'Universal DPS alternative (any element)',bWho:'Any DPS as universal starter',aWho:'Any DPS needing ATK boost'},
+  {name:'Speedy Hedgehog',type:'None',element:'universal',t2:'Charge Efficiency +12%',t4:'All allies ATK +15% for 20s after wearer casts Ultimate. Does not stack.',who:'Hotori · Sakiri (team buff priority)',bWho:'Buffer/support starter: full effect at all ranks',aWho:'Buffer/support mid-game'},
+  {name:"Thea's Night Tavern",type:'None',element:'heal',t2:'HP +10%',t4:'Healing Bonus +20%.',who:'Edgar · Fadia (pure tank)',bWho:'Healer/tank starter: full heal bonus at all ranks',aWho:'Healer mid-game'},
+  {name:'Tiny Big Adventure',type:'None',element:'hp',t2:'HP +10%',t4:'Max HP +4% per damage hit (up to 10 stacks). Ultimate instantly grants 10 stacks.',who:'Fadia (max HP build)',bWho:'Fadia HP focus starter',aWho:'Fadia HP mid-game'},
+  {name:'Street Boxer',type:'Six',element:'lakshana',t2:'Lakshana DMG +10%',t4:'Crit Chance +14%. Boosted during Remora/Stain reactions.',who:'Hathor · Skia',bWho:'Lakshana characters starter: Crit bonus active at all ranks',aWho:'Lakshana DPS mid-game'},
+];
+
+const ARCS = [
+  {name:"Good Boy's Grand Adventure",rank:'S',effect:'Anima follow-up damage bonus. Synergizes with characters who hit frequently.',who:'Jiuyuan · Nanally'},
+  {name:'Camellia Society',rank:'S',effect:'General premium DPS Arc with strong ATK passive scaling.',who:'Baicang · General S-rank DPS'},
+  {name:'Day Off',rank:'S',effect:'Cosmos-type Arc designed for ultimate-window burst synergy.',who:'Chiz · Hotori'},
+  {name:'Ready-Ready',rank:'S',effect:'Lakshana burst Arc complementing Emergency Delivery ATK stack scaling.',who:'Hathor'},
+  {name:'Blow up the Crowd',rank:'S',effect:'Chaos AoE/DoT amplification. Multi-hit Chaos builds.',who:'Lacrimosa · Daffodill'},
+  {name:'Youthful Fantasy',rank:'S',effect:'Consistent baseline ATK scaling. Strong universal DPS option.',who:'Lacrimosa · General DPS'},
+  {name:'Contemplative Cat',rank:'S',effect:'Incantation ATK Arc boosting Power Word burst windows.',who:'Baicang'},
+  {name:'Your Happiness is Priceless',rank:'S',effect:'ATK-scaling Arc: multiplied by Sakiri ultimate team buff.',who:'Sakiri'},
+  {name:'Raging Flames',rank:'S',effect:'High damage output Arc for aggressive DPS.',who:'General Chaos/Fire DPS'},
+  {name:'Eternal Waltz',rank:'S',effect:'Chaos dual-arc with break/crit synergy.',who:'Daffodill'},
+  {name:"Hethereau's Keeper",rank:'S',effect:'Lakshana Arc with ETD-4 faction bonus for cooperative attacks.',who:'Skia · Hathor'},
+  {name:'Fluff of Fortitude',rank:'S',effect:'HP/Survival focused. Maximizes tank HP threshold for skills that scale with HP.',who:'Fadia · Adler'},
+  {name:'Fluff of Ferocity',rank:'S',effect:'CRIT DMG +4-7% per Crit hit (up to 10 stacks). Best endgame Crit DMG Arc.',who:'Nanally · Jiuyuan · Baicang'},
+  {name:'Fluff of Finesse',rank:'S',effect:'Off-field charge building for supports and hybrids.',who:'Hotori · Sakiri'},
+  {name:'Fluff of Fleetness',rank:'S',effect:'Speed and burst Arc for fast-hitting melee DPS.',who:'Hathor · Mint'},
+  {name:'Fluff of Fearlessness',rank:'S',effect:'Break-oriented Arc amplifying Break DMG and Intensity.',who:'Daffodill'},
+  {name:'Reality Refuge',rank:'S',effect:'Defensive S-rank Arc for survival-priority builds.',who:'Fadia · Tank builds'},
+  {name:'Tears Beneath the Mask',rank:'S',effect:'Support/healing focused S-rank Arc.',who:'Edgar · Healer builds'},
+  {name:'Song of the Whale',rank:'S',effect:'Cosmos S-rank with unique passive effect.',who:'Chiz · Edgar'},
+  {name:'Marching Beyond Time',rank:'S',effect:'Cosmos time-replay synergy Arc for World\'s Tide window.',who:'Hotori'},
+  {name:'The Last Rose',rank:'S',effect:'Anima execution Arc syncing with Pact Settlement burst.',who:'Jiuyuan'},
+  {name:'The Rain That Shook the World',rank:'S',effect:'AoE-focused S-rank with wave-pattern damage amp.',who:'AoE DPS characters'},
+  {name:'Stellar Veil',rank:'S',effect:'Cosmos/Celestial S-rank with unique buff pattern.',who:'Chiz · Cosmos DPS'},
+  {name:'Umbrella',rank:'A',effect:'HP-focused A-rank. Best accessible healer/tank Arc.',who:'Edgar · Fadia'},
+  {name:'Cosmos Daze Wild Reverie',rank:'A',effect:'Cosmos A-rank for accessible Cosmos DPS scaling.',who:'Chiz · Hotori · Edgar'},
+  {name:'Shiny Days',rank:'A',effect:'General ATK support A-rank Arc.',who:'Support characters'},
+  {name:'The Forgotten',rank:'A',effect:'Chaos A-rank for accessible Chaos DPS.',who:'Lacrimosa · Daffodill'},
+  {name:'Oraora!',rank:'A',effect:'ATK-scaling Psyche A-rank. Best accessible Arc for Aurelia.',who:'Aurelia'},
+  {name:'Mind Royale',rank:'A',effect:'Crit Rate support A-rank. Great for reaching the 70% threshold.',who:'Aurelia · Baicang (early)'},
+  {name:'The Good The Bad The Bitter',rank:'A',effect:'Chaos support A-rank with unique passive.',who:'Daffodill · Lacrimosa'},
+  {name:'The Great Thief',rank:'A',effect:'Good general Crit/ATK A-rank for any melee DPS.',who:'Mint · Skia (F2P)'},
+  {name:'Watch Your Heads!',rank:'A',effect:'Accessible Lakshana A-rank option.',who:'Skia · Hathor (early)'},
+  {name:'Clear Skies',rank:'A',effect:'General A-rank strong for mid-game DPS needs.',who:'Jiuyuan · General DPS'},
+  {name:'Failing You Heavy in My Heart',rank:'A',effect:'Support-oriented A-rank with unique passive for buff characters.',who:'Sakiri · Hotori'},
+  {name:'Drawn Blade',rank:'A',effect:'Raw ATK A-rank. Simple and consistent for any DPS without signature Arc.',who:'Any DPS'},
+  {name:'A Time Will Come',rank:'A',effect:'General A-rank with reliable passive.',who:'Nanally · General melee DPS'},
+  {name:"The Fools' Spring",rank:'A',effect:'Accessible A-rank for healer/support builds.',who:'Edgar'},
+  {name:'Time Bandit',rank:'A',effect:'Charge/time-based A-rank utility Arc.',who:'Hotori · Sakiri (charge efficiency)'},
+  {name:'Call of the Twisted City',rank:'A',effect:'Defensive A-rank for support/tank characters.',who:'Adler'},
+  {name:'Dangerous Game',rank:'B',effect:'B-rank DPS placeholder. Replace with A-rank when possible.',who:'Any DPS (starter)'},
+  {name:'First Step to Success',rank:'B',effect:'B-rank general starter Arc.',who:'Any character (starter)'},
+  {name:'Be Happy',rank:'B',effect:'B-rank general option. Works on support or tank characters.',who:'Healer/support (starter)'},
+  {name:'Us.',rank:'B',effect:'B-rank utility placeholder.',who:'Any character (starter)'},
+  {name:'"Real Music"',rank:'B',effect:'B-rank filler Arc.',who:'Any character (starter)'},
+];
+
+function renderChars(filter){
+  const g=document.getElementById('char-grid');
+  const f=CHARS.filter(c=>{
+    if(filter==='all')return true;
+    if(filter==='s')return c.rank==='s';
+    if(filter==='a')return c.rank==='a';
+    if(filter==='dps')return c.role==='dps';
+    if(filter==='support')return c.role==='support';
+    if(filter==='tank')return c.role==='tank';
+    return c.element===filter;
+  });
+  g.innerHTML=f.map(c=>{
+    const col=elc(c.element);
+    const rankCls=c.rank==='s'?'bs':'ba';
+    const roleCls=c.role==='dps'?'bdps':c.role==='tank'?'btank':'bsup';
+    const elCls='b'+c.element;
+    return `<div class="cc" id="cc-${c.id}" onclick="toggleChar('${c.id}')">
+      <div class="cc-head">
+        <div class="avatar" style="background:${col}22;border-color:${col}55;color:${col}">${ini(c.name)}</div>
+        <div style="flex:1;min-width:0">
+          <div class="cname">${c.name}</div>
+          <div class="cmeta">
+            <span class="badge ${rankCls}">${c.rank.toUpperCase()}-Rank</span>
+            <span class="badge ${elCls}">${EC(c.element)}</span>
+            <span class="badge ${roleCls}">${c.roleTag.split('/')[0].trim()}</span>
+            <span style="color:var(--text3);font-size:.7rem">${c.faction}</span>
+          </div>
+        </div>
+        <div class="arr">▾</div>
+      </div>
+      <div class="cc-body">
+        <p style="margin-bottom:.8rem">${c.playstyle}</p>
+        <div class="btabs">${c.builds.map((b,i)=>`<button class="btab${i===0?' active':''}" onclick="switchBuild(event,'${c.id}',${i})">${b.label}</button>`).join('')}</div>
+        ${c.builds.map((b,i)=>`
+          <div class="bpane${i===0?' active':''}" id="bp-${c.id}-${i}">
+            <div class="blabel">Stat Priority</div>
+            <div class="pillrow">${b.stats.map(s=>`<span class="pill ${s.c}"><span class="n">${s.n}</span>${s.l}</span>`).join('')}</div>
+            <div class="blabel">Arc (Weapon)</div>
+            <div class="brow"><span class="rname">${b.arc.name}</span><div class="rdesc">${b.arc.desc}</div></div>
+            <div style="color:var(--text3);font-size:.72rem;margin-bottom:.4rem">Alt: ${b.arcAlt}</div>
+            <div class="blabel">Cartridge Set</div>
+            <div class="brow"><span class="rname">${b.cart.name}</span><div class="rdesc">2pc: ${b.cart.twoPc}</div><div class="rdesc">4pc: ${b.cart.fourPc}</div></div>
+            <div style="color:var(--text3);font-size:.72rem;margin-bottom:.4rem">Alt: ${b.cartAlt}</div>
+            <div class="note"><strong>Key Note:</strong> ${b.note}</div>
+          </div>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleChar(id){
+  const c=document.getElementById('cc-'+id);
+  c.classList.toggle('open');
+}
+
+function switchBuild(e,id,idx){
+  e.stopPropagation();
+  const c=document.getElementById('cc-'+id);
+  c.querySelectorAll('.btab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  c.querySelectorAll('.bpane').forEach((p,i)=>p.classList.toggle('active',i===idx));
+}
+
+function filterChars(v,btn){
+  document.querySelectorAll('#chars .fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderChars(v);
+}
+
+function renderCarts(){
+  const g=document.getElementById('cart-grid');
+  g.innerHTML=CARTS.map(c=>{
+    const ec={psyche:'#c026d3',cosmos:'#0891b2',chaos:'#ea580c',anima:'#16a34a',lakshana:'#ca8a04',incantation:'#7c3aed',defense:'#3b82f6',universal:'#94a3b8',heal:'#22c55e',hp:'#4ade80'}[c.element]||'#94a3b8';
+    return `<div class="cartcard">
+      <div class="cch">
+        <div class="ccname">${c.name}</div>
+        <div class="ttype" style="background:${ec}22;color:${ec};border:1px solid ${ec}44">${c.type!=='None'?c.type:'Universal'}</div>
+      </div>
+      <div class="crank-row">
+        <div class="crank-item"><span class="rk" style="color:var(--b)">B</span><span style="color:var(--text2);font-size:.72rem">${c.bWho}</span></div>
+        <div class="crank-item"><span class="rk" style="color:var(--a)">A</span><span style="color:var(--text2);font-size:.72rem">${c.aWho}</span></div>
+        <div class="crank-item"><span class="rk" style="color:var(--s)">S</span><span style="color:var(--text2);font-size:.72rem">${c.who}</span></div>
+      </div>
+      <div class="c2pc"><span class="cl">2-Piece</span>${c.t2}</div>
+      <div class="c4pc"><span class="cl">4-Piece</span>${c.t4}</div>
+      <div class="cwho">Best for (S): ${c.who}</div>
+    </div>`;
+  }).join('');
+}
+
+let currentArcFilter='all';
+function renderArcs(filter){
+  currentArcFilter=filter||currentArcFilter;
+  const g=document.getElementById('arc-grid');
+  const f=ARCS.filter(a=>currentArcFilter==='all'||a.rank===currentArcFilter);
+  const rankCol={S:'var(--s)',A:'var(--a)',B:'var(--b)'};
+  g.innerHTML=f.map(a=>`<div class="arccard">
+    <div class="arch">
+      <div class="arcname">${a.name}</div>
+      <span class="badge ${a.rank==='S'?'bs':a.rank==='A'?'ba':'bb'}">${a.rank}-Rank</span>
+    </div>
+    <div class="arcfx">${a.effect}</div>
+    <div class="arcwho">For: ${a.who}</div>
+  </div>`).join('');
+}
+
+function filterArcs(v,btn){
+  document.querySelectorAll('#arcs .fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderArcs(v);
+}
+
+function renderPnP(filter){
+  const list=document.getElementById('pnp-list');
+  const f=CHARS.filter(c=>{
+    if(filter==='all')return true;
+    if(filter==='s')return c.rank==='s';
+    if(filter==='a')return c.rank==='a';
+    if(filter==='dps')return c.role==='dps';
+    if(filter==='support')return ['support','tank'].includes(c.role);
+    return true;
+  });
+  list.innerHTML=f.map(c=>{
+    const col=elc(c.element);
+    const b=c.builds[0];
+    return `<div class="pnp">
+      <div class="pnph">
+        <div class="avatar" style="width:38px;height:38px;background:${col}22;border:2px solid ${col}55;color:${col};border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Cinzel;font-size:.75rem;font-weight:700;flex-shrink:0">${ini(c.name)}</div>
+        <div>
+          <div class="pnpname">${c.name}</div>
+          <div style="font-size:.7rem;color:var(--text3)">${c.rank.toUpperCase()}-Rank · ${EC(c.element)} · ${c.roleTag}</div>
+        </div>
+      </div>
+      <div class="pnprow"><span class="pnplbl">Best Arc</span><span class="badge bs" style="margin-right:.3rem">S</span><span style="color:var(--accent3);font-weight:600;font-size:.8rem">${b.arc.name.split('(')[0].trim()}</span></div>
+      <div class="pnprow"><span class="pnplbl">A-Rank Arc</span><span style="color:var(--a);font-size:.78rem">${c.builds[1]?.arc.name.split('(')[0].trim()||'See character tab'}</span></div>
+      <div class="pnprow"><span class="pnplbl">Cartridge</span><span style="color:var(--gold);font-weight:600;font-size:.78rem">${b.cart.name.split('(')[0].trim()}</span></div>
+      <div class="pnprow"><span class="pnplbl">Modules</span><div class="pillrow">${b.stats.slice(0,3).map(s=>`<span class="pill ${s.c}"><span class="n">${s.n}</span>${s.l}</span>`).join('')}</div></div>
+    </div>`;
+  }).join('');
+}
+
+function filterPnP(v,btn){
+  document.querySelectorAll('#plugplay .fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPnP(v);
+}
+
+function showSec(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const ids=['begin','golden','plugplay','chars','carts','arcs','modules','deepdive'];
+  document.querySelectorAll('#nav button').forEach((b,i)=>b.classList.toggle('active',ids[i]===id));
+}
+
+window.showSec=showSec;
+window.filterChars=filterChars;
+window.filterPnP=filterPnP;
+window.filterArcs=filterArcs;
+window.toggleChar=toggleChar;
+window.switchBuild=switchBuild;
+
+renderChars('all');
+renderCarts();
+renderArcs('all');
+renderPnP('all');
+</script>
+<footer style="text-align:center; padding:2rem; color:var(--text3); font-size:0.75rem;">
+  Community Guide • Compiled with 30+ hours of in-game testing • Not affiliated with Hotta Studio<br>
+  Last Updated: May 2026
+</footer>
+</body>
+</html>
