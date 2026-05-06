@@ -165,6 +165,7 @@ hr{border:none;border-top:1px solid var(--border);margin:1rem 0}
 </div>
 <nav id="nav">
   <button class="active" onclick="showSec('begin')">Beginner Guide</button>
+  <button onclick="showSec('levelguide')">Leveling Guide</button>
   <button onclick="showSec('golden')">Golden Rules</button>
   <button onclick="showSec('plugplay')">Plug &amp; Play</button>
   <button onclick="showSec('chars')">Characters</button>
@@ -185,7 +186,7 @@ hr{border:none;border-top:1px solid var(--border);margin:1rem 0}
     <div class="bgtip"><div class="bnum">03</div><div class="btitle">Focus One Team, Not Six</div><p>This is the most important early tip. Build one team of 4 characters to a high level before branching out. Spreading resources thin is the most common beginner mistake. Pick one strong DPS, one healer, one support, and one flex unit.</p></div>
     <div class="bgtip"><div class="bnum">04</div><div class="btitle">Level Up All Character Skills</div><p>All characters have multiple skill types you must level up individually: their basic attacks, ultimate attack, Critical Riposte, support skills, and passive skills that help the team. Leveling attributes alone is not enough. Each skill category scales your power independently, so invest in all of them as resources allow. Passives in particular can carry the whole team.</p></div>
     <div class="bgtip"><div class="bnum">05</div><div class="btitle">Get an Apartment and the Boxer Anomaly</div><p>Get an apartment as soon as possible and unlock the Boxer Anomaly inside it. The Boxer Anomaly raises your Crit DMG directly, and when you earn medals you level it up for even more. There is a cap in the first apartment, but it is one of the best early sources of guaranteed Crit DMG in the game, no RNG required.</p></div>
-    <div class="bgtip"><div class="bnum">06</div><div class="btitle">Fish Early, Grind Fons Smart</div><p>Fish often. Around 80 fish early on can net you roughly 60,000 to 80,000 Fons. Do not rush to get the cafe first: it does not generate much income early. Once you have around 1 million Fons, which is doable in a day, get a good car and grab food at the vending machine so you can keep grinding. The grind itself also generates Fons quickly, so treat it as part of your daily loop.</p></div>
+    <div class="bgtip"><div class="bnum">06</div><div class="btitle">Fish Early, Grind Fons Smart</div><p>Fish often. Just 20 fish can net around 40,000 Fons, and 40 fish can push that to 80,000 Fons or more depending on the daily requested catches and the value of other fish you land. In about 30 minutes you can have 100,000+ Fons. Do not rush to get the cafe first: it does not generate comparable income early. Once you have around 1 million Fons, which is very doable, get a good car and grab food at the vending machine so you can keep grinding. The grind itself also generates Fons quickly, so treat it as part of your daily loop.</p></div>
     <div class="bgtip"><div class="bnum">07</div><div class="btitle">Story First, Side Content Second</div><p>Clear the main Episodes first. They unlock core systems and reward Annulith (pull currency), Beetle Coins, and Hunter EXP. Spinoffs (side quests) are secondary but still reward good resources. City Tycoon is fun but optional early on.</p></div>
     <div class="bgtip"><div class="bnum">08</div><div class="btitle">Understand the Combat Loop</div><p>Basic attacks fill your Cycle Rate. When full, switching characters triggers their Esper Cycle (enhanced state). Hitting enemies depletes their Break Meter: fully breaking an enemy stuns them and boosts damage taken. Always dodge at the right moment to trigger a Critical Riposte counter.</p></div>
     <div class="bgtip"><div class="bnum">09</div><div class="btitle">Gather Hunter's Guides and Beetle Coins</div><p>Hunter's Guides level up your Espers; Beetle Coins pay for leveling. Both come from Episodes, Spinoffs, Anomaly Dungeons, and Pilgrimages. Never let these sit uncollected, as they expire from daily sources if ignored.</p></div>
@@ -232,6 +233,178 @@ hr{border:none;border-top:1px solid var(--border);margin:1rem 0}
         <tr><td style="color:#a78bfa">Incantation</td><td>Purple</td><td>Baicang, Sakiri, Adler</td><td>Incantation AoE</td></tr>
       </tbody>
     </table></div>
+  </div>
+</div>
+
+<!-- ==================== LEVELING GUIDE ==================== -->
+<div class="sec wrap" id="levelguide">
+  <h2>Leveling Guide — EXP and Fons Farming</h2>
+  <p>This guide covers how to progress efficiently from level 1 through level 24 and beyond in version 1.0. Levels 1 through 10 follow the same advice as the Beginner Guide. From level 10 onward, the approach changes significantly, and this page covers everything you need for the mid and late leveling phases.</p>
+
+  <div class="warn"><strong>Important:</strong> Hunter Level and Appraisal Level are two separate things. Hunter Level unlocks content and game modes. Appraisal Level increases enemy difficulty and drop quality. Push your Appraisal Level up whenever your team can handle it, as better drops directly speed up your build progression.</div>
+
+  <!-- PHASE TIMELINE -->
+  <div class="card" style="margin-top:1.3rem">
+    <h3>Leveling Phase Overview</h3>
+    <div class="scroll-t"><table>
+      <thead><tr><th>Phase</th><th>Level Range</th><th>Primary EXP Source</th><th>Primary Fons Source</th><th>Key Unlock</th></tr></thead>
+      <tbody>
+        <tr><td style="color:var(--accent3)">Early Game</td><td>1 to 10</td><td>Main Episodes, Prologue quests</td><td>Fishing (immediate income)</td><td>Apartment, first Cafe, Boxer Anomaly</td></tr>
+        <tr><td style="color:var(--gold)">Mid Game</td><td>10 to 18</td><td>Anomaly Commissions, Spinoffs, Bosses</td><td>Fishing, Deliveries, Cafe restocking</td><td>Pink Paws Heist, City Delivery, Boss fights</td></tr>
+        <tr><td style="color:var(--crit)">End of 1.0 Content</td><td>18 to 24+</td><td>Boss daily runs, Anomaly Zones</td><td>Pink Paws Heist (group), Deliveries, Racing</td><td>Enforcer, higher Appraisal Tiers, Anomaly Zones for mats</td></tr>
+        <tr><td style="color:var(--silver)">Post-Story (1.0 Cap)</td><td>24+</td><td>Slow: Bosses + Zones only</td><td>All Fons sources combined daily</td><td>EXP crawl begins: daily consistency is everything</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <!-- EXP SECTION -->
+  <h3 style="margin-top:1.8rem;margin-bottom:1rem">EXP Farming — How to Level Up</h3>
+
+  <div class="ddblock">
+    <h3>1. Anomaly Commissions — Your Best Early EXP Source</h3>
+    <p>Anomaly Commissions are not just the Gift from 21 dice chests. They are a full system of special missions spread across every district of Hethereau. To find them, open your World Map and look for the folder icon called the Anomagram. This opens a list of all available Anomaly Commissions with rough locations marked, so you can track them down efficiently.</p>
+    <p>Anomalies come in three types. Some are combat challenges where you fight a supernatural enemy. Some are puzzles, like logic or environmental challenges. And some are multi-stage puzzles that chain several challenges together before giving the reward. All of them give Hunter EXP on first completion, ranging from around 120 EXP for basic commissions up to 450 EXP for harder ones. They also reward Annulith (10 to 60 per commission), Fons (6,000 to 20,000), Beetle Coins, Carrota currency, and even S-rank Arc drops.</p>
+    <p>Crucially, every standard S-rank Arc in the game can be obtained once through Anomaly Commissions. This means a completely free-to-play player can fully weapon their entire team without spending Tri-Keys on Arc banners, simply by completing commissions.</p>
+    <div class="note"><strong>How to Access:</strong> Open World Map, find the folder icon (the Anomagram), and browse your list of available commissions. Anomalies scale to your current level, so you do not need to do them in a specific order. If something is too hard right now, come back after leveling up a bit.</div>
+    <div class="warn"><strong>Regions with Anomaly Commissions:</strong> Bridge Crossings, Unheard Shores, Illusion Town, Miguel District, and New Herland District. Each district has multiple commissions. Complete them all for a massive one-time EXP and reward windfall.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>2. Boss Fights — Guaranteed Daily EXP After Anomaly Unlock</h3>
+    <p>Boss fights unlock after you complete the corresponding Anomaly Commission for each area. Once unlocked, they are a guaranteed source of Hunter EXP and should be part of your daily run. Unlike Anomaly Commissions which are one-time events, bosses can be refought on a cooldown, making them a reliable repeatable EXP source.</p>
+    <p>Bosses also drop character ascension materials, the same items you farm in Anomaly Zones. Running bosses daily gives you both EXP progression and the materials needed to level up your characters' skills and breakthrough caps simultaneously. This is the most efficient use of your daily stamina budget.</p>
+    <div class="warn"><strong>At the End of 1.0 Content:</strong> Once you finish all quests and story content, the EXP curve slows down dramatically. Boss daily runs and Anomaly Zone farming become your only meaningful EXP sources. Start building the habit of daily boss runs now, before you need it, so the routine is already established when the grind begins.</div>
+    <div class="scroll-t" style="margin-top:.8rem"><table>
+      <thead><tr><th>Boss</th><th>Region</th><th>Notable Drop</th></tr></thead>
+      <tbody>
+        <tr><td>Never-Ending Arachne</td><td>Bridge Crossings</td><td>Character ascension mats</td></tr>
+        <tr><td>Morphix</td><td>Illusion Town</td><td>Character ascension mats</td></tr>
+        <tr><td>Headless Rider</td><td>Miguel District</td><td>Character ascension mats</td></tr>
+        <tr><td>Sea Prisoner</td><td>Unheard Shores</td><td>Character ascension mats</td></tr>
+        <tr><td>Serenetti</td><td>Unheard Shores</td><td>Character ascension mats</td></tr>
+        <tr><td>Swallowtail</td><td>New Herland District</td><td>Character ascension mats</td></tr>
+        <tr><td>Mammon</td><td>Miguel District</td><td>Character ascension mats</td></tr>
+        <tr><td>Beat King</td><td>Bridge Crossings</td><td>Character ascension mats</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="ddblock">
+    <h3>3. Anomaly Zones — Character Materials and Supplemental EXP</h3>
+    <p>Anomaly Zones are marked on the map with a reverse horseshoe curtain icon. These are repeatable combat zones that drop character ascension materials, module mats, and cartridges. They do not give as much Hunter EXP per run as Anomaly Commissions, but they are your primary source of the materials needed to actually level up and break through your characters' stat ceilings.</p>
+    <p>There are four Anomaly Zone hubs: Houdinii's Magic Stage, Bubble Can Factory, Houdinii's Schemes, and Rabbit Hole. Each has multiple sub-dungeons targeting different material types. Farm these after hitting max level in your current Appraiser tier, as higher tiers drop higher quality materials and cartridges.</p>
+    <div class="note"><strong>Tip:</strong> Check which Anomaly Zone drops the ascension materials for your main DPS before farming. Going to the wrong zone wastes stamina. Each zone has a material type listed on its entry screen.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>5. Daily Participations — Free 1,500 EXP in Under 5 Minutes</h3>
+    <p>Every day you can complete five Daily Participations that each reward 300 Hunter EXP on completion, for a guaranteed 1,500 EXP daily just for logging in and doing the bare minimum. This is completely free EXP that costs almost no time, so there is no reason to ever skip it. Make these the very first thing you do every session.</p>
+    <div class="scroll-t" style="margin-top:.6rem"><table>
+      <thead><tr><th>Daily Task</th><th>EXP</th><th>How to Complete It Fast</th><th>Bonus</th></tr></thead>
+      <tbody>
+        <tr><td style="color:var(--accent3)">Login</td><td>300</td><td>Just open the game. Done automatically on login.</td><td>Daily login rewards</td></tr>
+        <tr><td style="color:var(--accent3)">Spend Fons at Cafe</td><td>300</td><td>Restock your cafe when you log in. Collecting the previous restock income and then restocking counts as spending Fons, making this a 2-for-1: you earn your passive income and tick the daily at the same time.</td><td>Passive cafe income collected</td></tr>
+        <tr><td style="color:var(--accent3)">Defeat 5 Enemies</td><td>300</td><td>Stop a street crime in any district. Crimes spawn frequently around the city and defeating the criminals counts toward this daily. You will pass one on the way to nearly anything else.</td><td>Minor drops from criminals</td></tr>
+        <tr><td style="color:var(--accent3)">Send a Bond Character a Gift</td><td>300</td><td>Open your Bond menu and send a gift to any character. Any gift item works. This takes about 10 seconds.</td><td>Bond relationship EXP</td></tr>
+        <tr><td style="color:var(--accent3)">Spend Fons (2nd Fons Daily)</td><td>300</td><td>When you restock your cafe, you are simultaneously completing the Cafe daily (spending Fons at the cafe) and the Spend Fons daily (spending Fons anywhere). Restocking once ticks both dailies at the exact same time, making it a genuine 2-for-1 with zero extra effort.</td><td>Two dailies completed with one action</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><strong>Total: 1,500 free EXP every single day.</strong> If you do nothing else in a session, complete these five tasks. The login, cafe restock, one street crime, and one gift together take under 5 minutes. Over 30 days that is 45,000 free EXP with minimal effort, which is a meaningful chunk of progression toward the end of 1.0 content.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>4. Main Episodes and Spinoffs First, Then Side Content</h3>
+    <p>Up through level 18 approximately, your best EXP per hour comes from clearing story content: Main Episodes and Spinoffs. These are front-loaded with large one-time EXP rewards, Annulith for pulls, and unlock critical game systems. Clear the main story in order. Use Spinoffs (side quest chains) as supplemental EXP between main episodes. Gift from 21 dice chests are worth collecting while you explore, as each one gives a small EXP reward on top of other drops.</p>
+  </div>
+
+  <!-- FONS SECTION -->
+  <h3 style="margin-top:1.8rem;margin-bottom:1rem">Fons Farming — How to Get Rich in Hethereau</h3>
+
+  <div class="ddblock">
+    <h3>1. Fishing — Fastest Fons Method in the Game, At Every Stage</h3>
+    <p>Fishing is the single fastest way to generate Fons in Neverness to Everness, and it stays relevant from day one all the way through the end of 1.0 content and beyond. The numbers are better than most players expect: just 20 fish can net around 40,000 Fons, and 40 fish can push that to 80,000 Fons or more. In about 30 minutes of active fishing a player can walk away with 100,000+ Fons. The exact amount depends on whether the fish you catch match the daily requested catches, which sell for a premium, and the base market value of the other fish you land alongside them.</p>
+    <p>It is a grind, but it is the most reliable high-income activity available at any stage of progression, with no unlock requirements beyond reaching a body of water. No other single activity comes close to this Fons-per-hour ceiling when done consistently.</p>
+    <p>The key trick for maximizing fishing income is to reach Fishing Hobby Level 4 as early as possible, which unlocks a new and better rod. Once you have the level 4 rod, push through the game's main story content and complete it first. Then come back to fishing afterward. By that point you will have exhausted all the main quest EXP rewards, and fishing becomes your most important post-story Fons source, filling the income gap that opens up once active story progression slows down.</p>
+    <p>Coupled with the Pink Paws Heist, consistent fishing is how players realistically afford higher-tiered apartment upgrades, premium character outfits from the in-game store, and other expensive end-of-1.0 purchases. These are meaningful goals that take sustained farming, and fishing is the backbone of that income.</p>
+    <div class="note"><strong>Daily Requested Catches:</strong> Check which fish are on the daily request list before each session. Catching requested fish sells for significantly more than base value. Targeting bodies of water where requested species spawn turns a good fishing session into a great one.</div>
+    <div class="warn"><strong>Fishing Progression:</strong> Prioritize reaching Fishing Hobby Level 4 for the upgraded rod. The better rod increases your catch rate and the quality of fish you can land, which directly raises the Fons value per session. Do not skip this investment.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>2. Pink Paws Heist — Best Group Fons Farm, Play with Friends</h3>
+    <p>The Pink Paws Heist is a multiplayer bank robbery minigame that unlocks through City Tycoon progression. It is the single best Fons farming activity in the game when played in a group, and dramatically less efficient when played solo. If you have friends or a Discord server for the game, coordinate to run this together. Groups that play efficiently leave with approximately 100,000 Fons per run, and the activity is genuinely fun in a coordinated group call.</p>
+    <p>There is a Fons cap of 1,000,000 from this activity, so plan your runs accordingly and spend down your Fons before hitting the ceiling if you want to keep farming. The activity involves rushing to bosses, finding keycards, and completing objectives under time pressure: a fast team makes an enormous difference versus a slower disorganized group.</p>
+    <div class="note"><strong>Best Tip:</strong> Do the Pink Paws Heist in a voice call with your group. Communication about keycard locations and boss positions cuts run times significantly and makes 100,000+ Fons per run consistent.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>3. City Deliveries — Reliable Daily Income, Easy to Run</h3>
+    <p>City Delivery is a driving minigame that unlocks at City Tycoon Level 8. Each delivery run earns between 16,000 and 60,000 Fons, depending on the delivery distance, time bonus, and order size. The amount varies from delivery to delivery, but running a full rotation of available deliveries each day can generate hundreds of thousands of Fons with minimal effort. You are simply driving a vehicle across the city to drop-off points, so it can be done casually while listening to something else.</p>
+    <p>Add deliveries to your daily rotation alongside fishing and boss runs. Between deliveries, fishing, and your cafe passive income, it is very easy to generate over 300,000 Fons in a single day of casual play once these systems are unlocked.</p>
+    <div class="warn"><strong>Unlock Requirement:</strong> City Tycoon Level 8. Focus on leveling City Tycoon early so deliveries are available as soon as possible.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>4. Cafes — Passive Income and How to Get the Most From Them</h3>
+    <p>The Cafe by Origen is NTE's cafe management system. There are five cafe locations available in version 1.0, each unlocked at a different City Tycoon Management Level. The key mechanic is restocking: always restock for the full 72-hour window before logging out so your cafe generates Fons while you are offline. Cafes alone will not match active farming like fishing or deliveries, but as a passive background layer they add up significantly over time.</p>
+    <div class="scroll-t" style="margin-top:.6rem"><table>
+      <thead><tr><th>Cafe</th><th>Location</th><th>Mgmt. Level Required</th><th>Purchase Cost</th></tr></thead>
+      <tbody>
+        <tr><td>Bluebeard Road Shop</td><td>182 Bluebeard Road, Bridge Crossings</td><td>Level 1</td><td>5,000 Fons</td></tr>
+        <tr><td>Fiscus Avenue Shop</td><td>106 Fiscus Avenue, Unheard Shores</td><td>Level 5</td><td>20,000 Fons</td></tr>
+        <tr><td>Davidia Avenue Shop</td><td>1122 North Davidia Avenue, Bridge Crossings</td><td>Level 10</td><td>40,000 Fons</td></tr>
+        <tr><td>Moomin Street Shop</td><td>88 Moomin Street, Bridge Crossings</td><td>Level 17</td><td>75,000 Fons</td></tr>
+        <tr><td>Hankaku Street Shop</td><td>199 Hankaku Street Plaza, Bridge Crossings</td><td>Level 25</td><td>100,000 Fons</td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:.8rem">Each cafe can have an Esper assigned as an employee, and their Life Skill passives directly improve cafe performance. Key employee skills include: Nanally increasing dish prices and reducing ingredient consumption, Daffodill and Skia both increasing customer traffic by up to 45 across their skill levels, and Baicang providing further traffic and efficiency bonuses. Assign your strongest available Espers with cafe life skills to maximize passive income per hour.</p>
+    <div class="note"><strong>Restocking Tip:</strong> Always restock for the full 72-hour window before logging out. Shorter restocks mean your cafe runs dry and stops generating Fons mid-session. If you check in once a day, a 72-hour restock guarantees income is waiting when you return even if you miss a day.</div>
+    <div class="warn"><strong>Do Not Rush Cafes Early:</strong> The first cafe costs only 5,000 Fons and is worth getting immediately for the passive income. However, do not skip fishing to save up for higher-tier cafes early on. Fish first, build your Fons pool, then buy cafes as the money comes naturally.</div>
+  </div>
+
+  <div class="ddblock">
+    <h3>5. Racing — Fun Bonus Income with the Right Car</h3>
+    <p>Racing is available through the Hethereau Hobbies system and generates Fons as prize money for winning or placing in races. The Enforcer is the recommended vehicle for racing: it is expensive but not ruinously so, and its performance advantage makes consistent top placements much easier. The cost of the Enforcer pays for itself quickly through race prize income if you run races regularly.</p>
+    <p>Racing is not the primary Fons method, but it is a fun way to supplement your income and level up your racing hobby skill, which increases prize money over time. If you enjoy driving in the open world, add races to your daily loop.</p>
+    <div class="note"><strong>Enforcer:</strong> A Novus-class vehicle available from the vehicle dealer. It is expensive upfront but offers strong race performance. The investment is worth it if you plan to race regularly for supplemental income.</div>
+  </div>
+
+  <!-- CITY TYCOON -->
+  <div class="ddblock">
+    <h3>6. City Tycoon — Invest Here for Everything to Improve</h3>
+    <p>City Tycoon is not just a side game: it is the central progression system that unlocks most of Hethereau's income streams and apartment combat bonuses. Every City Tycoon level unlocks new activities, properties, and combat perks. Raising City Tycoon level fast should be a consistent daily priority from day one, not something saved for later.</p>
+    <p>The fastest ways to raise City Tycoon level are completing City Tycoon missions (shown in the City Tycoon menu), purchasing and upgrading properties, stocking and restocking your cafes, completing deliveries, and participating in hobbies. The Boxer Anomaly and Hamster Anomaly both come from apartment progression, which is a City Tycoon feature. These give guaranteed Crit DMG and module quality bonuses respectively that you cannot get from any other source.</p>
+    <div class="scroll-t" style="margin-top:.8rem"><table>
+      <thead><tr><th>City Tycoon Level</th><th>Key Unlock</th><th>Why It Matters</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Apartment access</td><td>Boxer Anomaly (guaranteed Crit DMG), base combat buffs</td></tr>
+        <tr><td>3</td><td>First Cafe slot</td><td>Passive Fons income begins</td></tr>
+        <tr><td>5</td><td>Additional properties</td><td>More passive income streams</td></tr>
+        <tr><td>8</td><td>City Delivery unlocked</td><td>16,000 to 60,000 Fons per delivery run</td></tr>
+        <tr><td>10</td><td>Pink Paws Heist unlocked</td><td>Up to 100,000 Fons per group run</td></tr>
+        <tr><td>12+</td><td>Additional cafe slots and upgrades</td><td>Higher passive Fons per hour offline</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <!-- DAILY ROUTINE -->
+  <div class="card">
+    <h3>Recommended Daily Routine (Mid to Late Game)</h3>
+    <p>Once you have the core systems unlocked, this is the efficient daily loop for maximizing both EXP and Fons.</p>
+    <div class="scroll-t"><table>
+      <thead><tr><th>Order</th><th>Activity</th><th>EXP Gain</th><th>Fons Gain</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Daily Participations (all 5)</td><td>1,500 (guaranteed)</td><td>Cafe income collected</td><td>Under 5 min: login, restock cafe (completes both Cafe and Spend Fons dailies at once), stop a crime, send a gift</td></tr>
+        <tr><td>2</td><td>Visit the Witch's House (when Oracle Stones ready)</td><td>Small EXP reward</td><td>Oracle Stone exchange Fons</td><td>Varies: Oracle Stones are scattered across the map. Collecting them all can take a few hours depending on which level stones you are farming and how many you have outstanding. Do not count on this as a quick daily task.</td></tr>
+        <tr><td>3</td><td>Boss daily runs (all unlocked bosses)</td><td>High</td><td>Minor</td><td>15-30 min</td></tr>
+        <tr><td>4</td><td>City Deliveries (full rotation)</td><td>Minimal</td><td>100,000 to 300,000+</td><td>20-30 min</td></tr>
+        <tr><td>5</td><td>Pink Paws Heist (with group)</td><td>Minimal</td><td>100,000 per run</td><td>15-20 min</td></tr>
+        <tr><td>6</td><td>Fishing session</td><td>Minimal</td><td>40,000 to 80,000</td><td>20-30 min</td></tr>
+        <tr><td>7</td><td>Anomaly Commission (if any uncompleted)</td><td>120 to 450 per commission</td><td>6,000 to 20,000</td><td>10-20 min each</td></tr>
+        <tr><td>8</td><td>Cafe restock (72H before logout)</td><td>None</td><td>Passive overnight</td><td>1 min</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note" style="margin-top:.8rem"><strong>Total Daily Potential:</strong> Daily Participations alone give 1,500 free EXP in under 5 minutes. Add boss runs, deliveries, one Pink Paws Heist, and a fishing session and you are looking at 300,000 to 500,000+ Fons alongside meaningful EXP gains. With cafe passive income on top, hitting 1 million Fons in a week of consistent play is very achievable. Over 30 days, Daily Participations alone contribute 45,000 free EXP with almost zero effort.</div>
   </div>
 </div>
 
@@ -1055,7 +1228,7 @@ function filterPnP(v,btn){
 function showSec(id){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  const ids=['begin','golden','plugplay','chars','carts','arcs','modules','deepdive'];
+  const ids=['begin','levelguide','golden','plugplay','chars','carts','arcs','modules','deepdive'];
   document.querySelectorAll('#nav button').forEach((b,i)=>b.classList.toggle('active',ids[i]===id));
 }
 
