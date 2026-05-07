@@ -608,7 +608,100 @@ Examples:
   </div>
 
   <div class="ddblock">
-    <h3>Full Comparative Priority Table by Role</h3>
+    <h3>Recommended Team Compositions</h3>
+    <p>NTE teams consist of 4 characters. The general structure is: 1 main DPS, 1 sub-DPS or flex DPS, 1 buffer, and 1 healer or shielder. Faction bonuses reward keeping 3 or more characters from the same faction, so building around ETD-4 or Eibon unlocks free passive damage on top of your gear investment.</p>
+
+    <div class="scroll-t" style="margin-top:.8rem"><table>
+      <thead><tr><th>Team Name</th><th>Characters</th><th>Playstyle</th><th>Strength</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="color:var(--s);font-weight:700">Full ETD-4 Faction</td>
+          <td>Baicang · Lacrimosa · Fadia · Skia</td>
+          <td>Baicang bursts inside his domain while Lacrimosa applies Nightmare DoT. Fadia soaks damage and enables Baicang and Lacrimosa faction procs. Skia enters stealth for his faction cooperative attack with Baicang.</td>
+          <td>Free cooperative attacks from all three ETD-4 passive triggers simultaneously. Fadia keeps the team alive. Strong sustained and burst damage combined.</td>
+        </tr>
+        <tr>
+          <td style="color:var(--s);font-weight:700">Eibon Burst</td>
+          <td>Nanally · Daffodill · Sakiri · Adler</td>
+          <td>Sakiri buffs the entire team ATK with her ultimate. Adler shields and applies DoT. Nanally is the primary DPS with Underboss mirroring. Daffodill handles breaker duties and chaos RES shred.</td>
+          <td>Sakiri team ATK buff multiplies Nanally and Daffodill damage simultaneously. Adler shields let Nanally stay aggressive. Eibon faction synergy adds passive bonuses.</td>
+        </tr>
+        <tr>
+          <td style="color:var(--s);font-weight:700">Anima Crit Stack</td>
+          <td>Jiuyuan · Nanally · Hotori · Edgar</td>
+          <td>Jiuyuan and Nanally both run Fireflies and the Forest, stacking Crit DMG rapidly through multi-hit Anima patterns. Hotori records and replays their skills for bonus Cosmos damage during World's Tide. Edgar sustains the team.</td>
+          <td>Two Fireflies stacks building simultaneously. Hotori World's Tide adds a third damage window on top of the two DPS rotations. Edgar ensures full uptime with no deaths.</td>
+        </tr>
+        <tr>
+          <td style="color:var(--s);font-weight:700">Psyche Reaction</td>
+          <td>Aurelia · Haniel · Fadia · Edgar</td>
+          <td>Aurelia is the primary DPS dealing Psyche DMG into Nova and Stain reactions. Haniel deploys Hootie for off-field Ensemble Psyche procs and team ATK buff. Fadia redirects damage. Edgar heals.</td>
+          <td>Devil's Blood: Curse 4pc on Aurelia gives 36% DMG against Nova/Stain targets. Haniel's Hootie adds persistent off-field Psyche DMG between Aurelia's rotations. Double ATK buffer in Haniel and Fadia's kit.</td>
+        </tr>
+        <tr>
+          <td style="color:var(--gold);font-weight:700">Chaos Breaker</td>
+          <td>Daffodill · Lacrimosa · Sakiri · Adler</td>
+          <td>Daffodill breaks enemies with Insight for massive break burst. Lacrimosa applies Nightmare DoT and Chaos DMG, maintaining Scorch reaction for Diabolos RES shred. Sakiri buffs both. Adler shields.</td>
+          <td>Diabolos 4pc fires at full 24% Chaos RES ignore during Scorch. Daffodill break burst + Lacrimosa DoT + Sakiri ATK buff is one of the highest sustained damage floors in 1.0.</td>
+        </tr>
+        <tr>
+          <td style="color:var(--gold);font-weight:700">Sterry Express</td>
+          <td>Hathor · Jiuyuan · Haniel · Edgar</td>
+          <td>Hathor stacks Express Delivery charges and bursts with Cyclone Strike. Jiuyuan places Pact Marks. Haniel buffs team ATK from off-field Hootie. Edgar heals.</td>
+          <td>Hathor and Jiuyuan both have high burst windows that benefit from Haniel's ATK buff. Two independent DPS rotations mean at least one burst window is always available.</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="ddblock">
+    <h3>Skill Rotations</h3>
+    <p>NTE rotations center around maximizing time in your main DPS's strongest window (usually their ultimate state) while keeping support buffs active. The general principle is: deploy buffs first, then switch to your DPS to consume them. Here are rotations for the most common team structures.</p>
+
+    <hr>
+    <h4 style="color:var(--accent3);margin-bottom:.5rem">Sakiri Buffer Rotation (Universal — works with any Eibon DPS)</h4>
+    <div class="formula">1. Sakiri: Skill (Kiroumaru CC + starts Incantation DMG stacking for Twin Butterflies)
+2. Sakiri: Ultimate (Feast of Gluttony — team ATK buff active, Speedy Hedgehog 4pc fires)
+3. Swap to Main DPS immediately
+4. DPS: Full skill rotation inside the ATK buff window (20s)
+5. Sub-DPS: Skill + any off-field hits while ATK buff is still active
+6. Adler: Skill (Evil's Bane shield + DoT)
+7. Repeat from Step 1 when Sakiri's ultimate is ready again</div>
+    <div class="note"><strong>Key:</strong> Sakiri's ultimate buff lasts 20 seconds. Your entire DPS rotation should fit inside this window. If your Charge Efficiency is low, use Speedy Hedgehog on Sakiri specifically so she gets her ultimate back faster.</div>
+
+    <hr style="margin-top:1rem">
+    <h4 style="color:var(--accent3);margin-bottom:.5rem">Baicang ETD-4 Burst Rotation</h4>
+    <div class="formula">1. Skia: Skill (enter stealth, attach Fang Thrusts — triggers ETD-4 stealth cooperative attack with Baicang)
+2. Fadia: Skill (Existence — damage redirect active, HP threshold primed for ETD-4 cooperative proc)
+3. Lacrimosa: Skill (Tomato form switch — triggers ETD-4 bat form cooperative attack with Baicang)
+4. Baicang: Skill (accumulate Power Words: Curse, Bless, Objurgate)
+5. Baicang: Ultimate (Contemplative Domain — detonate all Power Words inside domain)
+6. Continue Baicang basic attacks inside the domain to regenerate Power Words for second detonation
+7. Swap out as domain ends, cycle supports again</div>
+    <div class="note"><strong>Key:</strong> The three ETD-4 cooperative attack triggers (Skia stealth, Fadia HP threshold, Lacrimosa bat switch) all fire free bonus hits alongside Baicang automatically when active. Line them up before Baicang's ultimate for maximum damage density inside his domain window.</div>
+
+    <hr style="margin-top:1rem">
+    <h4 style="color:var(--accent3);margin-bottom:.5rem">Hotori Replay Rotation</h4>
+    <div class="formula">1. Main DPS: Use Skill (Hotori records this skill)
+2. Hotori: Switch in, use Present Replay to record the DPS skill again if needed
+3. Hotori: Ultimate (World's Tide time-stop — replays recorded skills with Cosmos DMG amp)
+4. Inside time-stop: use any additional Hotori skills for extra Cosmos hits
+5. Main DPS: Resume rotation as time-stop ends
+6. Repeat — aim to record the highest DMG skill available each cycle</div>
+    <div class="note"><strong>Key:</strong> Hotori replays the last recorded skill during World's Tide. Always make sure the skill recorded is your DPS's highest-damage move, not a basic attack. Time recording deliberately by switching to Hotori immediately after the DPS uses their big skill.</div>
+
+    <hr style="margin-top:1rem">
+    <h4 style="color:var(--accent3);margin-bottom:.5rem">Daffodill Breaker Rotation</h4>
+    <div class="formula">1. Lacrimosa: Skill (apply Nightmare DoT, trigger Chaos Scorch reaction for Diabolos 24% RES shred)
+2. Sakiri: Skill + Ultimate (team ATK buff active)
+3. Daffodill: Basic attacks to build Phantom Step charges
+4. Daffodill: Ultimate (Finale — Paranormal Ace state, Insight active on enemies)
+5. Inside Finale: Parry attacks to gain extra Phantom Step charges
+6. Enemy Break triggered inside Finale with Insight: Break burst fires with full RES shred + ATK buff + Chaos DMG bonus
+7. Adler: Skill (shield + DoT) during downtime
+8. Repeat Daffodill rotation on next Finale cooldown</div>
+    <div class="note"><strong>Key:</strong> The Daffodill break burst is most effective when Diabolos 4pc is already active (requires Scorch reaction from Lacrimosa), Sakiri's ATK buff is running, and Insight is applied before the break happens. Stacking all three simultaneously is her damage ceiling. Practice the parry timing: mastering it significantly increases Phantom Step charges and thus Finale damage output.</div>
+  </div>
     <div class="scroll-t"><table>
       <thead><tr><th>Role</th><th>Example Characters</th><th>Priority 1</th><th>Priority 2</th><th>Priority 3</th><th>Priority 4</th><th>Skip</th></tr></thead>
       <tbody>
@@ -958,30 +1051,30 @@ const CHARS = [
       stats:[{l:'HP%',c:'php',n:1},{l:'ATK%',c:'patk',n:2}],
       note:"Thea's Night Tavern B-rank 4pc gives the full Healing Bonus. Edgar heals adequately at B-rank gear in early content. His limiting factor is usually HP pool, not substat quality."}
    ]},
-  {id:'haniel',name:'Haniel',rank:'a',element:'psyche',role:'support',roleTag:'Support / Buffer',faction:'Unknown',
-   playstyle:'Haniel is an A-rank Psyche support character. Specific skill details were unavailable during data collection; build on standard Psyche support principles until more information is available.',
+  {id:'haniel',name:'Haniel',rank:'a',element:'psyche',role:'support',roleTag:'ATK Buffer / Off-Field DMG',faction:'Sterry Express',
+   playstyle:'Haniel is an A-rank Psyche support buffer from Sterry Express. She deploys Hootie, a portable speaker owl, via her Silent Moonlit Forest Guardian skill. While Hootie is active, the team receives an ATK bonus based on Haniel\'s own base ATK, and every 4 hits on any character accumulate Four-Part Harmony stacks that trigger Ensemble: an AoE Psyche DMG burst around Hootie. Her ultimate A Melody Named Haniel enters Paranormal Ace state, further boosting the team\'s ATK from her base ATK and upgrading Ensemble to Ensemble Symphony with increased DMG and range. Hootie stays on the field when you swap characters, enabling off-field Ensemble procs while your DPS is active. She is essentially a Psyche-flavored version of Sakiri: her own ATK stat directly scales the buff she gives the whole team.',
    builds:[
-     {label:'S-Rank',tab:'s',
-      arc:{name:'Any S-rank Psyche Arc',desc:'Prioritize ATK% or HP% depending on whether Haniel buffs via ATK or HP scaling.'},
-      arcAlt:'Fluff of Finesse (S) for off-field utility',
-      cart:{name:"Devil's Blood: Curse (S)",twoPc:'Psyche DMG +10%',fourPc:'DMG bonus for Psyche team.'},
-      cartAlt:'Speedy Hedgehog (S) if kit involves team buff on ultimate',
-      stats:[{l:'ATK%',c:'patk',n:1},{l:'Psyche DMG%',c:'ptype',n:2},{l:'HP%',c:'php',n:3}],
-      note:'Update this build when full skill data for Haniel is available. Based on his A-rank support designation, ATK% and Psyche DMG% are the safest initial investments.'},
+     {label:'S-Rank Buffer',tab:'s',
+      arc:{name:'Your Happiness is Priceless (S)',desc:'ATK-scaling Arc. Like Sakiri, every point of ATK Haniel has increases the team ATK buff from Hootie and her ultimate. This is her best-in-slot Arc.'},
+      arcAlt:'Fluff of Finesse (S) for Charge Efficiency to get Paranormal Ace up more often',
+      cart:{name:'Speedy Hedgehog (S)',twoPc:'Charge Efficiency +12%',fourPc:'All allies ATK +15% for 20s after Haniel casts Ultimate. Stacks additively with her own kit ATK buff.'},
+      cartAlt:"Devil's Blood: Curse (S) if running a full Psyche team for the 10% Psyche DMG team bonus",
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Psyche DMG%',c:'ptype',n:2},{l:'Charge Eff',c:'pchrg',n:3},{l:'Crit Rate',c:'pcrit',n:4}],
+      note:'Haniel buffs team ATK from her base ATK exactly like Sakiri does. Stack ATK% first, then Charge Efficiency to get Paranormal Ace active more often. The Speedy Hedgehog 4pc stacks on top of her kit buff for a significant combined team ATK multiplier during ultimate windows.'},
      {label:'A-Rank',tab:'a',
-      arc:{name:'Mind Royale (A)',desc:'Crit Rate and Psyche support A-rank Arc.'},
-      arcAlt:'Oraora! (A)',
-      cart:{name:"Devil's Blood: Curse (A)",twoPc:'Psyche DMG +10%',fourPc:'DMG bonus.'},
-      cartAlt:'Speedy Hedgehog (A)',
-      stats:[{l:'ATK%',c:'patk',n:1},{l:'Psyche DMG%',c:'ptype',n:2}],
-      note:'Standard Psyche A-rank approach until full kit data is available.'},
+      arc:{name:'Failing You Heavy in My Heart (A)',desc:'Best accessible A-rank for buffer characters. Support-focused passive synergizes with her kit.'},
+      arcAlt:'Shiny Days (A) for general ATK support',
+      cart:{name:'Speedy Hedgehog (A)',twoPc:'Charge Efficiency +12%',fourPc:'Team ATK +15% on ultimate: full effect at A-rank.'},
+      cartAlt:"Devil's Blood: Curse (A) for Psyche team composition",
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Charge Eff',c:'pchrg',n:2},{l:'Psyche DMG%',c:'ptype',n:3}],
+      note:'Speedy Hedgehog A-rank gives the full 15% team ATK bonus on ultimate, same as S-rank. This is excellent value at A-rank. Prioritize ATK% substats so her Hootie buff scales well even without S-rank gear.'},
      {label:'B-Rank (Starter)',tab:'b',
-      arc:{name:'Any B-rank Arc in slot',desc:'Filler until A-rank available.'},
-      arcAlt:'Be Happy (B)',
-      cart:{name:"Devil's Blood: Curse (B)",twoPc:'Psyche DMG +10%',fourPc:'DMG bonus.'},
-      cartAlt:'Shadow Creed (B)',
-      stats:[{l:'ATK%',c:'patk',n:1},{l:'HP%',c:'php',n:2}],
-      note:'Fill slots for now. Revisit when full Haniel build data is available from the community.'}
+      arc:{name:'Be Happy (B)',desc:'B-rank general starter. Replace with A-rank as soon as possible.'},
+      arcAlt:'Us. (B) as alternative',
+      cart:{name:'Speedy Hedgehog (B)',twoPc:'Charge Efficiency +12%',fourPc:'Team ATK +15% on ultimate: full effect even at B-rank.'},
+      cartAlt:"Devil's Blood: Curse (B) for Psyche team",
+      stats:[{l:'ATK%',c:'patk',n:1},{l:'Charge Eff',c:'pchrg',n:2}],
+      note:'Speedy Hedgehog B-rank 4pc gives the complete team ATK buff. This is one of the best B-rank set values in the game on a buffer. Equip it immediately and focus ATK% substats so Hootie\'s team buff is as strong as possible from day one.'}
    ]},
   {id:'mint',name:'Mint',rank:'a',element:'anima',role:'dps',roleTag:'Main DPS / Melee',faction:'ETD-4 (CSU-2)',
    playstyle:'Mint is a fast melee DPS with wind-based Anima attacks. Her Thunderous Whirlwind Slash ultimate deals multiple Anima DMG hits with a massive final strike. Her passive boosts DEF and interruption resistance while on-field: do not compensate for this with module stats.',
