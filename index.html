@@ -1889,7 +1889,7 @@ function renderArcs(filter){
   const g=document.getElementById('arc-grid');
   const f=ARCS.filter(a=>currentArcFilter==='all'||a.rank===currentArcFilter);
   const typeColor={Solid:'#22d3ee',Liquid:'#4ade80',Gas:'#fb923c',Plasma:'#e879f9',Synthesis:'#a78bfa'};
-  const typeEmoji={Solid:'🌊',Liquid:'💧',Gas:'🔥',Plasma:'⚡',Synthesis:'✨'};
+  const typeEmoji={Solid:'🪨',Liquid:'💧',Gas:'🔥',Plasma:'⚡',Synthesis:'✨'};
   g.innerHTML=f.map(a=>`<div class="arccard">
     <div class="arch" style="align-items:flex-start;gap:.8rem">
       <a href="${imgSrc(a.img)}" target="_blank" style="flex-shrink:0;display:block">
